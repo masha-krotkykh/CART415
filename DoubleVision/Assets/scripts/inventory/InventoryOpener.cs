@@ -9,7 +9,8 @@ public class InventoryOpener : MonoBehaviour
     {
       if(Panel != null)
       {
-        Panel.SetActive(true);
+        bool isActive = Panel.activeSelf;
+        Panel.SetActive(!isActive);
       }
     }
 }
