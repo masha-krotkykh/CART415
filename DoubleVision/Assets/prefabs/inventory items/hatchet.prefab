@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1163651565094981574
+--- !u!1 &6439480397794511650
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,26 +8,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2551350235000702207}
-  - component: {fileID: 1163651565094981624}
-  - component: {fileID: 1163651565094981625}
-  - component: {fileID: 1163651565094981626}
-  - component: {fileID: 1168493865129036736}
-  - component: {fileID: 6596532642903295119}
+  - component: {fileID: 7643602690804662299}
+  - component: {fileID: 6439480397794511644}
+  - component: {fileID: 6439480397794511645}
+  - component: {fileID: 6434778936433905444}
+  - component: {fileID: 1364635621359304811}
+  - component: {fileID: 6439480397832370115}
   m_Layer: 0
-  m_Name: hatchet
+  m_Name: Hatchet 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &2551350235000702207
+--- !u!224 &7643602690804662299
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163651565094981574}
+  m_GameObject: {fileID: 6439480397794511650}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1956.3192}
   m_LocalScale: {x: 45.01424, y: 45.01424, z: 45.01424}
@@ -40,13 +40,13 @@ RectTransform:
   m_AnchoredPosition: {x: 233.3, y: -186.5}
   m_SizeDelta: {x: 3.14, y: 1.71}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!212 &1163651565094981624
+--- !u!212 &6439480397794511644
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163651565094981574}
+  m_GameObject: {fileID: 6439480397794511650}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -88,13 +88,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1163651565094981625
+--- !u!61 &6439480397794511645
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163651565094981574}
+  m_GameObject: {fileID: 6439480397794511650}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -114,34 +114,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.14, y: 1.71}
   m_EdgeRadius: 0
---- !u!114 &1163651565094981626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163651565094981574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27e2a748e61c641eeb01ce992010cd8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popup: {fileID: 0}
---- !u!222 &1168493865129036736
+--- !u!222 &6434778936433905444
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163651565094981574}
+  m_GameObject: {fileID: 6439480397794511650}
   m_CullTransparentMesh: 0
---- !u!114 &6596532642903295119
+--- !u!114 &1364635621359304811
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163651565094981574}
+  m_GameObject: {fileID: 6439480397794511650}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -169,3 +156,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: It's a good hatchet. Might be useful.
+--- !u!114 &6439480397832370115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6439480397794511650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e837ea2a1b6cb4524ac0190a2f03c5f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popup: {fileID: 0}
+  itemButton: {fileID: 319931093330848137, guid: 75dbec38432bd49d989f5e814f0f4c85,
+    type: 3}
