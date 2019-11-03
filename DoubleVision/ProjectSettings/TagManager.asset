@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - EventSystem
+  - Inventory
+  - invButton
   layers:
   - Default
   - TransparentFX

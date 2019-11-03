@@ -12,6 +12,7 @@ public class Pickup : MonoBehaviour
 
   private Inventory inventory;
   public GameObject itemButton;
+  public bool collected = false;
 
 
     // Start is called before the first frame update
