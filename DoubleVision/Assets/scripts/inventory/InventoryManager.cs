@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class InventoryManager : MonoBehaviour
 {
     public Transform HatchetItem; //you need one prefab like this for each tiem
+    public Transform PillsItem;
     public Text ItemLabel; //this is only for debug, ideally you would have an image following the cursor
     public string CurrentItem = ""; //this is the public variable that you can check to see if the current item is selected.
 
     void Start()
     {
-        PlayerPrefs.SetInt("hatchet", 1); //Remove this, only to make sure we have matches from the start
+        //PlayerPrefs.SetInt("hatchet", 0); //Remove this, only to make sure we have matches from the start
         UpdateInventory(); //Display what we have right now.
     }
 
@@ -51,15 +52,22 @@ public class InventoryManager : MonoBehaviour
 
     public void UpdateInventory()
     {
-        //First we clear all the children of the inventory objects (the items)
+        //First we clear all the grandchildren of the inventory objects (the items)
         foreach (Transform child in transform)
         {
-            Destroy(child.gameObject);
+
+          foreach (Transform grandChild in child)
+            Destroy(grandChild.gameObject);
         }
         //Then we add all the items we have. You need of these for each of your item
         if (PlayerPrefs.GetInt("hatchet")==1)
         {
             Instantiate(HatchetItem, this.transform);
+        }
+
+        if (PlayerPrefs.GetInt("pills")==1)
+        {
+            Instantiate(PillsItem, this.transform);
         }
     }
 
