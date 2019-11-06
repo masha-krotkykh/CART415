@@ -838,9 +838,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1442408891}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2641d6c0ad0c44093bf7eb461c58d413, type: 3}
+  m_Script: {fileID: 11500000, guid: e423c4bed61c24d798cb19ed7c5dee0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popup: {fileID: 0}
+  inventory: {fileID: 0}
+  Delirious: 0
 --- !u!114 &1442408894
 MonoBehaviour:
   m_ObjectHideFlags: 0
