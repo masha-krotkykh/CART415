@@ -132,6 +132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pills
       objectReference: {fileID: 0}
+    - target: {fileID: 8433595044489468421, guid: 4e3aa9e1d23704b22a67eb967dc9bd14,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hidden
+      objectReference: {fileID: 0}
     - target: {fileID: 1112990643942632522, guid: 4e3aa9e1d23704b22a67eb967dc9bd14,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -244,6 +249,12 @@ PrefabInstance:
       objectReference: {fileID: 304772837}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e3aa9e1d23704b22a67eb967dc9bd14, type: 3}
+--- !u!1 &35920544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8433595044489468421, guid: 4e3aa9e1d23704b22a67eb967dc9bd14,
+    type: 3}
+  m_PrefabInstance: {fileID: 35920543}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &304772836 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6344482150350268197, guid: b4279ab664ef84722beecb69bddd4a86,
@@ -278,7 +289,7 @@ GameObject:
   - component: {fileID: 383233251}
   m_Layer: 0
   m_Name: wallpaper
-  m_TagString: Untagged
+  m_TagString: Real
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -838,12 +849,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1442408891}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e423c4bed61c24d798cb19ed7c5dee0e, type: 3}
+  m_Script: {fileID: 11500000, guid: f8c78abcff8584a64935a70e9b9e5340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popup: {fileID: 0}
-  inventory: {fileID: 0}
-  Delirious: 0
+  pillsCollected: 0
+  wallpaperCollected: 0
+  pills: {fileID: 35920544}
+  wallpaper: {fileID: 0}
 --- !u!114 &1442408894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -888,7 +900,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1442408893}
-        m_MethodName: goFront
+        m_MethodName: GoFront
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1153,7 +1165,6 @@ GameObject:
   - component: {fileID: 1936204360}
   - component: {fileID: 1936204359}
   - component: {fileID: 1936204358}
-  - component: {fileID: 1936204362}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1244,18 +1255,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1936204362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936204357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2641d6c0ad0c44093bf7eb461c58d413, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2108587151
 GameObject:
   m_ObjectHideFlags: 0

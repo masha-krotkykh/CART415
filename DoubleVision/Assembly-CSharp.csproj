@@ -66,13 +66,15 @@
     <Compile Include="Assets\scripts\dialogues\DialogueManager.cs" />
     <Compile Include="Assets\scripts\dialogues\DialogueTrigger.cs" />
     <Compile Include="Assets\scripts\doors.cs" />
-    <Compile Include="Assets\scripts\Interactions.cs" />
+    <Compile Include="Assets\scripts\Interactions_00_back.cs" />
+    <Compile Include="Assets\scripts\Interactions_00_front.cs" />
     <Compile Include="Assets\scripts\inventory\Inventory.cs" />
     <Compile Include="Assets\scripts\inventory\InventoryItem.cs" />
     <Compile Include="Assets\scripts\inventory\InventoryManager.cs" />
     <Compile Include="Assets\scripts\inventory\InventoryOpener.cs" />
     <Compile Include="Assets\scripts\inventory\Pickup.cs" />
     <Compile Include="Assets\scripts\PopUp.cs" />
+    <Compile Include="Assets\scripts\StateSwitch.cs" />
     <Compile Include="Assets\scripts\undestructable.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/masha/Desktop/CART415/DoubleVision/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

@@ -355,12 +355,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 134757693}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e423c4bed61c24d798cb19ed7c5dee0e, type: 3}
+  m_Script: {fileID: 11500000, guid: ba9e2823096c540c68dde75f96cb952b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popup: {fileID: 0}
-  inventory: {fileID: 0}
-  Delirious: 0
+  hatchetCollected: 0
+  hatchet: {fileID: 1735887625}
 --- !u!114 &134757696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,7 +404,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 134757695}
-        m_MethodName: goBack
+        m_MethodName: GoBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1293,7 +1292,7 @@ GameObject:
   - component: {fileID: 1735887631}
   m_Layer: 0
   m_Name: hatchet
-  m_TagString: Untagged
+  m_TagString: Hidden
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1493,12 +1492,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1757250650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e423c4bed61c24d798cb19ed7c5dee0e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7fd6f2b05b80d4b34a7618b6b4243af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popup: {fileID: 304772837}
-  inventory: {fileID: 646231628}
-  Delirious: 0
 --- !u!1 &1841306211
 GameObject:
   m_ObjectHideFlags: 0
@@ -1952,7 +1948,7 @@ PrefabInstance:
     - target: {fileID: 2781050491226089645, guid: 473a350e7288e4c7e955b91b63239008,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 171.42857
+      value: 171.42859
       objectReference: {fileID: 0}
     - target: {fileID: 2781050491226089645, guid: 473a350e7288e4c7e955b91b63239008,
         type: 3}

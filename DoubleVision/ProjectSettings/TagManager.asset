@@ -8,6 +8,7 @@ TagManager:
   - Inventory
   - invButton
   - Hidden
+  - Real
   layers:
   - Default
   - TransparentFX
