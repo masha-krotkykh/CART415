@@ -17,10 +17,16 @@ public class Interactions_00_back : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        // Targeting GameObjects to get access to ttheir properties set in other scripts
         pills = GameObject.Find("pills");
+
+        // Check if the object was aready collected on the previous visit
         if (PlayerPrefs.GetInt("pillsCollected") == 1)
         {
+
+            // And destroy it from the scene 
+
+
             // -------------------->>           Destroy(pills);
 
 
@@ -47,12 +53,16 @@ public class Interactions_00_back : MonoBehaviour
         }
     }
 
+
+    // Instruct the button to take player to another scene "front of the room"
     public void GoFront()
     {
         SaveVars();
         SceneManager.LoadScene("room_00_front");
     }
 
+    // Access "Pickup" component of the GamObject to check if it's been collected and if so, set it's state to 1
+    // and save this value for future visits
     public void SaveVars()
     {
         if (pills != null)
