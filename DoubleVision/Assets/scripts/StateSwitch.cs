@@ -7,23 +7,33 @@ public class StateSwitch : MonoBehaviour
     // Script to switch between "lucid" and "delirious" states
     bool showHidden = false;
 
+    GameObject[] hiddenObjects;
+    GameObject[] realObjects;
+    GameObject hiddenBG;
+    GameObject realBG;
 
     // Update is called once per frame
     void Update()
     {
 
         // For now on spacebar key press
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             // switch between the two states back and forth
             showHidden = !showHidden;
 
+        }
+
             // If the current state is "delirious" player sees what's hidden
             if(showHidden)
             {
-                GameObject[] hiddenObjects = GameObject.FindGameObjectsWithTag("Hidden");
 
-                foreach(GameObject go in hiddenObjects)
+            hiddenObjects = GameObject.FindGameObjectsWithTag("Hidden");
+            realObjects = GameObject.FindGameObjectsWithTag("Real");
+            hiddenBG = GameObject.FindGameObjectWithTag("HiddenBG");
+            realBG = GameObject.FindGameObjectWithTag("RealBG");
+
+            foreach (GameObject go in hiddenObjects)
                 {
                     go.GetComponent<SpriteRenderer>().enabled = true;
                     go.GetComponent<BoxCollider2D>().enabled = true;
@@ -31,13 +41,21 @@ public class StateSwitch : MonoBehaviour
 
 
                 // but doesn't see real interactible objects
-                GameObject[] realObjects = GameObject.FindGameObjectsWithTag("Real");
+
 
                 foreach (GameObject go in realObjects)
                 {
                     go.GetComponent<SpriteRenderer>().enabled = false;
                     go.GetComponent<BoxCollider2D>().enabled = false;
                 }
+
+
+                // Same for the environment. Turn the "delirious" environment on
+                // and the "lucid" environment off through videoplayer component
+
+
+                hiddenBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = true;
+                realBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = false;
             }
 
 
@@ -45,22 +63,28 @@ public class StateSwitch : MonoBehaviour
             // hidden objects disappear and the real ones reappear
             else
             {
-                GameObject[] hiddenObjects = GameObject.FindGameObjectsWithTag("Hidden");
 
-                foreach (GameObject go in hiddenObjects)
+            hiddenObjects = GameObject.FindGameObjectsWithTag("Hidden");
+            realObjects = GameObject.FindGameObjectsWithTag("Real");
+            hiddenBG = GameObject.FindGameObjectWithTag("HiddenBG");
+            realBG = GameObject.FindGameObjectWithTag("RealBG");
+
+            foreach (GameObject go in hiddenObjects)
                 {
                     go.GetComponent<SpriteRenderer>().enabled = false;
                     go.GetComponent<BoxCollider2D>().enabled = false;
                 }
 
-                GameObject[] realObjects = GameObject.FindGameObjectsWithTag("Real");
 
                 foreach (GameObject go in realObjects)
                 {
                     go.GetComponent<SpriteRenderer>().enabled = true;
                     go.GetComponent<BoxCollider2D>().enabled = true;
                 }
+
+                hiddenBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = false;
+                realBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = true;
             }
         }
     }
-}
+

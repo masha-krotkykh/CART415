@@ -9,6 +9,8 @@ TagManager:
   - invButton
   - Hidden
   - Real
+  - RealBG
+  - HiddenBG
   layers:
   - Default
   - TransparentFX

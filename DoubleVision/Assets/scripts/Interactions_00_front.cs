@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 public class Interactions_00_front : MonoBehaviour
 {
 
-    public int hatchetCollected = 0;
+    public int knifeCollected = 0;
 
-    public GameObject hatchet;
+    public GameObject knife;
 
 
 
@@ -17,11 +17,11 @@ public class Interactions_00_front : MonoBehaviour
     void Start()
     {
         // Targeting GameObjects to get access to ttheir properties set in other scripts
-        hatchet = GameObject.Find("hatchet");
+        knife = GameObject.Find("knife");
 
 
         // Check if the object was aready collected on the previous visit
-        if (PlayerPrefs.GetInt("hatchetCollected")==1)
+        if (PlayerPrefs.GetInt("knifeCollected")==1)
         {
 
             // And destroy it from the scene 
@@ -30,8 +30,8 @@ public class Interactions_00_front : MonoBehaviour
 
             // TEMPORARY! REMOVE BEFORE BUILD
 
-            Debug.Log("hatchet is already collected");
-            hatchetCollected = 0;
+            Debug.Log("knife is already collected");
+            knifeCollected = 0;
 
             //-----------------------------------//
         }
@@ -50,14 +50,14 @@ public class Interactions_00_front : MonoBehaviour
     // and save this value for future visits
     public void SaveVars()
     {
-        if (hatchet != null)
+        if (knife != null)
         {
-            Pickup pickup = hatchet.GetComponent<Pickup>();
+            Pickup pickup = knife.GetComponent<Pickup>();
             if (pickup.collected == true)
             {
-                hatchetCollected = 1;
+                knifeCollected = 1;
             }
         }
-        PlayerPrefs.SetInt("hatchetCollected", hatchetCollected);
+        PlayerPrefs.SetInt("knifeCollected", knifeCollected);
     }
 }
