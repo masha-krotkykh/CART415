@@ -12,6 +12,11 @@ public class StateSwitch : MonoBehaviour
     GameObject hiddenBG;
     GameObject realBG;
 
+    private void Start()
+    {
+        SwitchVideos();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -21,12 +26,16 @@ public class StateSwitch : MonoBehaviour
         {
             // switch between the two states back and forth
             showHidden = !showHidden;
-
+            SwitchVideos();
         }
+    }
 
-            // If the current state is "delirious" player sees what's hidden
-            if(showHidden)
-            {
+    public void SwitchVideos()
+    {
+
+        // If the current state is "delirious" player sees what's hidden
+        if (showHidden)
+        {
 
             hiddenObjects = GameObject.FindGameObjectsWithTag("Hidden");
             realObjects = GameObject.FindGameObjectsWithTag("Real");
@@ -34,35 +43,35 @@ public class StateSwitch : MonoBehaviour
             realBG = GameObject.FindGameObjectWithTag("RealBG");
 
             foreach (GameObject go in hiddenObjects)
-                {
-                    go.GetComponent<SpriteRenderer>().enabled = true;
-                    go.GetComponent<BoxCollider2D>().enabled = true;
-                }
-
-
-                // but doesn't see real interactible objects
-
-
-                foreach (GameObject go in realObjects)
-                {
-                    go.GetComponent<SpriteRenderer>().enabled = false;
-                    go.GetComponent<BoxCollider2D>().enabled = false;
-                }
-
-
-                // Same for the environment. Turn the "delirious" environment on
-                // and the "lucid" environment off through videoplayer component
-
-
-                hiddenBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = true;
-                realBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = false;
+            {
+                go.GetComponent<SpriteRenderer>().enabled = true;
+                go.GetComponent<BoxCollider2D>().enabled = true;
             }
 
 
-            // Oposite situation in "lucid" state
-            // hidden objects disappear and the real ones reappear
-            else
+            // but doesn't see real interactible objects
+
+
+            foreach (GameObject go in realObjects)
             {
+                go.GetComponent<SpriteRenderer>().enabled = false;
+                go.GetComponent<BoxCollider2D>().enabled = false;
+            }
+
+
+            // Same for the environment. Turn the "delirious" environment on
+            // and the "lucid" environment off through videoplayer component
+
+
+            hiddenBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = true;
+            realBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = false;
+        }
+
+
+        // Oposite situation in "lucid" state
+        // hidden objects disappear and the real ones reappear
+        else
+        {
 
             hiddenObjects = GameObject.FindGameObjectsWithTag("Hidden");
             realObjects = GameObject.FindGameObjectsWithTag("Real");
@@ -70,21 +79,23 @@ public class StateSwitch : MonoBehaviour
             realBG = GameObject.FindGameObjectWithTag("RealBG");
 
             foreach (GameObject go in hiddenObjects)
-                {
-                    go.GetComponent<SpriteRenderer>().enabled = false;
-                    go.GetComponent<BoxCollider2D>().enabled = false;
-                }
-
-
-                foreach (GameObject go in realObjects)
-                {
-                    go.GetComponent<SpriteRenderer>().enabled = true;
-                    go.GetComponent<BoxCollider2D>().enabled = true;
-                }
-
-                hiddenBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = false;
-                realBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = true;
+            {
+                go.GetComponent<SpriteRenderer>().enabled = false;
+                go.GetComponent<BoxCollider2D>().enabled = false;
             }
+
+
+            foreach (GameObject go in realObjects)
+            {
+                go.GetComponent<SpriteRenderer>().enabled = true;
+                go.GetComponent<BoxCollider2D>().enabled = true;
+            }
+
+            hiddenBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = false;
+            realBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = true;
         }
+    }
+
+
     }
 

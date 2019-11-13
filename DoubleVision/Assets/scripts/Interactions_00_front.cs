@@ -7,8 +7,7 @@ using UnityEngine.SceneManagement;
 public class Interactions_00_front : MonoBehaviour
 {
 
-    public int knifeCollected = 0;
-
+    public int knifeCollected;
     public GameObject knife;
 
 
@@ -16,26 +15,32 @@ public class Interactions_00_front : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Targeting GameObjects to get access to ttheir properties set in other scripts
-        knife = GameObject.Find("knife");
+		// Targeting GameObjects to get access to their properties set in other scripts
+		knife = GameObject.Find("knife");
 
 
-        // Check if the object was aready collected on the previous visit
-        if (PlayerPrefs.GetInt("knifeCollected")==1)
-        {
+		// Check if the object was aready collected on the previous visit
+		if (PlayerPrefs.GetInt("knifeCollected") == 1)
+		{
+			knifeCollected = 1;
+			// And destroy it from the scene 
+			// -------------------->>
+			Destroy(knife);
 
-            // And destroy it from the scene 
-            // -------------------->>           Destroy(knife);
+			// TEMPORARY! REMOVE BEFORE BUILD
+
+			Debug.Log("knife is already collected");
+			//knifeCollected = 0;
 
 
-            // TEMPORARY! REMOVE BEFORE BUILD
+			//-----------------------------------//
+		}
 
-            Debug.Log("knife is already collected");
-            knifeCollected = 0;
-
-            //-----------------------------------//
-        }
-    }
+        else
+		{
+			knifeCollected = 0;
+		}
+	}
 
 
     // Instruct the button to take player to another scene "back of the room"
@@ -58,6 +63,12 @@ public class Interactions_00_front : MonoBehaviour
                 knifeCollected = 1;
             }
         }
+
+        else if (knife == null)
+		{
+			knifeCollected = 1;
+		}
+
         PlayerPrefs.SetInt("knifeCollected", knifeCollected);
     }
 }

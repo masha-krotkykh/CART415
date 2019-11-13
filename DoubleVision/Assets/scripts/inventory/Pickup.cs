@@ -39,9 +39,12 @@ public class Pickup : MonoBehaviour
             popupMessage = gameObject.GetComponent<Text>().text;
             popup.ShowPopUp(popupMessage);
             // Destroy the game object from the scene
-            // Destroy(gameObject);
-            gameObject.SetActive(false);
-            // Set the state to "collected"
+
+            Destroy(gameObject);
+            //gameObject.SetActive(false);
+
+
+           // Set the state to "collected"
             collected = true;
            // and the loop stops
            break;

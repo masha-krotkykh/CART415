@@ -17,46 +17,61 @@ public class Interactions_00_back : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Targeting GameObjects to get access to ttheir properties set in other scripts
-        pills = GameObject.Find("pills");
-
-        // Check if the object was aready collected on the previous visit
-        if (PlayerPrefs.GetInt("pillsCollected") == 1)
-        {
-
-            // And destroy it from the scene 
+		// Targeting GameObjects to get access to their properties set in other scripts
+		wallpaper = GameObject.Find("wallpaper");
+		pills = GameObject.Find("pills");
 
 
-            // -------------------->>           Destroy(pills);
+		// Check if the object was aready collected on the previous visit
+		if (PlayerPrefs.GetInt("pillsCollected") == 1)
+		{
+			pillsCollected = 1;
+			// And destroy it from the scene 
+			// -------------------->>
+			Destroy(pills);
+
+			// TEMPORARY! REMOVE BEFORE BUILD
+
+			Debug.Log("pills are already collected");
+			//knifeCollected = 0;
 
 
-            // TEMPORARY REMOVE BEFORE BUILD
+			//-----------------------------------//
+		}
 
-            Debug.Log("pills are already collected");
-            pillsCollected = 0;
-
-            //-----------------------------------//
-        }
-
-        wallpaper = GameObject.Find("wallpaper");
-        if (PlayerPrefs.GetInt("wallpaperCollected") == 1)
-        {
-            // -------------------->>           Destroy(wallpaper);
+		else
+		{
+			wallpaperCollected = 0;
+		}
 
 
-            // TEMPORARY! REMOVE BEFORE BUILD
+		if (PlayerPrefs.GetInt("wallpaperCollected") == 1)
+		{
+			wallpaperCollected = 1;
+			// And destroy it from the scene 
+			// -------------------->>
+			Destroy(wallpaper);
 
-            Debug.Log("wallpaper is already collected");
-            wallpaperCollected = 0;
+			// TEMPORARY! REMOVE BEFORE BUILD
 
-            //-----------------------------------//
-        }
-    }
+			Debug.Log("wallpaper are already collected");
+			//knifeCollected = 0;
+
+
+			//-----------------------------------//
+		}
+
+		else
+		{
+			wallpaperCollected = 0;
+		}
+	}
 
 
     // Instruct the button to take player to another scene "front of the room"
     public void GoFront()
     {
+        Debug.Log("Go front");
         SaveVars();
         SceneManager.LoadScene("room_00_front");
     }
@@ -73,6 +88,13 @@ public class Interactions_00_back : MonoBehaviour
                 pillsCollected = 1;
             }
         }
+
+        else if(pills == null)
+		{
+			pillsCollected = 1;
+		}
+
+
         PlayerPrefs.SetInt("pillsCollected", pillsCollected);
 
 
@@ -85,6 +107,12 @@ public class Interactions_00_back : MonoBehaviour
                 wallpaperCollected = 1;
             }
         }
+
+        else if (wallpaperCollected == null)
+		{
+			wallpaperCollected = 1;
+		}
+
         PlayerPrefs.SetInt("wallpaperCollected", wallpaperCollected);
     }
 }

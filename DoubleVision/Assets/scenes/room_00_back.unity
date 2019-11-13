@@ -130,7 +130,7 @@ PrefabInstance:
     - target: {fileID: 8433595044489468421, guid: 4e3aa9e1d23704b22a67eb967dc9bd14,
         type: 3}
       propertyPath: m_Name
-      value: Pills
+      value: pills
       objectReference: {fileID: 0}
     - target: {fileID: 8433595044489468421, guid: 4e3aa9e1d23704b22a67eb967dc9bd14,
         type: 3}
@@ -1277,7 +1277,7 @@ PrefabInstance:
     - target: {fileID: 7702986823444623416, guid: 7732f2f50cd9149c0900655058e7d60d,
         type: 3}
       propertyPath: m_Name
-      value: wp
+      value: wallpaper
       objectReference: {fileID: 0}
     - target: {fileID: 7702986823444623416, guid: 7732f2f50cd9149c0900655058e7d60d,
         type: 3}
