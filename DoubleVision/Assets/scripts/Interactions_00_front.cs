@@ -25,7 +25,7 @@ public class Interactions_00_front : MonoBehaviour
         {
 
             // And destroy it from the scene 
-            // -------------------->>           Destroy(pills);
+            // -------------------->>           Destroy(knife);
 
 
             // TEMPORARY! REMOVE BEFORE BUILD

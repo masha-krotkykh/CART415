@@ -60,12 +60,17 @@ public class InventoryManager : MonoBehaviour
             Destroy(grandChild.gameObject);
         }
         //Then we add all the items we have. You need of these for each of your item
-        if (PlayerPrefs.GetInt("hatchet")==1)
+        if (PlayerPrefs.GetInt("knife")==1)
         {
             Instantiate(HatchetItem, this.transform);
         }
 
         if (PlayerPrefs.GetInt("pills")==1)
+        {
+            Instantiate(PillsItem, this.transform);
+        }
+
+        if (PlayerPrefs.GetInt("wallpaper") == 1)
         {
             Instantiate(PillsItem, this.transform);
         }

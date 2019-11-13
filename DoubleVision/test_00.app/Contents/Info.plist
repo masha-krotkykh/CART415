@@ -10,13 +10,13 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>test_00</string>
+	<string>New Unity Project</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Unity Player version 2019.1.2f1 (3e18427e571f). (c) 2019 Unity Technologies ApS. All rights reserved.</string>
+	<string>Unity Player version 2019.2.9f1 (ebce4d76e6e8). (c) 2019 Unity Technologies ApS. All rights reserved.</string>
 	<key>CFBundleIconFile</key>
 	<string>PlayerIcon.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.Company.ProductName</string>
+	<string>com.DefaultCompany.NewUnityProject</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -38,7 +38,7 @@
 	<key>NSPrincipalClass</key>
 	<string>PlayerApplication</string>
 	<key>UnityBuildNumber</key>
-	<string>3e18427e571f</string>
+	<string>ebce4d76e6e8</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.9.0</string>
 </dict>
