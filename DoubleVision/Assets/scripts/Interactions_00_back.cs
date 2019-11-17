@@ -31,7 +31,7 @@ public class Interactions_00_back : MonoBehaviour
 
 			// TEMPORARY! REMOVE BEFORE BUILD
 
-			Debug.Log("pills are already collected");
+			//Debug.Log("pills are already collected");
 			pillsCollected = 0;
 
 
@@ -52,7 +52,7 @@ public class Interactions_00_back : MonoBehaviour
 
 			// TEMPORARY! REMOVE BEFORE BUILD
 
-			Debug.Log("wallpaper are already collected");
+			//Debug.Log("wallpaper are already collected");
 			wallpaperCollected = 0;
 
 
@@ -69,7 +69,6 @@ public class Interactions_00_back : MonoBehaviour
     // Instruct the button to take player to another scene "front of the room"
     public void GoFront()
     {
-        Debug.Log("Go front");
         SaveVars();
         SceneManager.LoadScene("room_00_front");
     }
@@ -106,11 +105,12 @@ public class Interactions_00_back : MonoBehaviour
             }
         }
 
-        else if (wallpaperCollected == null)
+        else if (wallpaper == null)
 		{
 			wallpaperCollected = 1;
 		}
 
         PlayerPrefs.SetInt("wallpaperCollected", wallpaperCollected);
+
     }
 }

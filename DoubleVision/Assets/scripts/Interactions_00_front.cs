@@ -24,13 +24,12 @@ public class Interactions_00_front : MonoBehaviour
 		{
 			knifeCollected = 1;
 			// And destroy it from the scene 
-			// --------------------> 
-            Destroy(knife);
+			// --------------------> Destroy(knife);
 
 			// TEMPORARY! REMOVE BEFORE BUILD
 
-			Debug.Log("knife is already collected");
-			//knifeCollected = 0;
+			//Debug.Log("knife is already collected");
+			knifeCollected = 0;
 
 
 			//-----------------------------------//
@@ -70,5 +69,8 @@ public class Interactions_00_front : MonoBehaviour
 		}
 
         PlayerPrefs.SetInt("knifeCollected", knifeCollected);
+
+
+
     }
 }
