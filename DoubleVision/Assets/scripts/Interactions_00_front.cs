@@ -24,8 +24,8 @@ public class Interactions_00_front : MonoBehaviour
 		{
 			knifeCollected = 1;
 			// And destroy it from the scene 
-			// -------------------->>
-			Destroy(knife);
+			// --------------------> 
+            Destroy(knife);
 
 			// TEMPORARY! REMOVE BEFORE BUILD
 

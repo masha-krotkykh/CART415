@@ -27,13 +27,12 @@ public class Interactions_00_back : MonoBehaviour
 		{
 			pillsCollected = 1;
 			// And destroy it from the scene 
-			// -------------------->>
-			Destroy(pills);
+			// -------------------->> Destroy(pills);
 
 			// TEMPORARY! REMOVE BEFORE BUILD
 
 			Debug.Log("pills are already collected");
-			//knifeCollected = 0;
+			pillsCollected = 0;
 
 
 			//-----------------------------------//
@@ -49,13 +48,12 @@ public class Interactions_00_back : MonoBehaviour
 		{
 			wallpaperCollected = 1;
 			// And destroy it from the scene 
-			// -------------------->>
-			Destroy(wallpaper);
+			// --------------------> Destroy(wallpaper);
 
 			// TEMPORARY! REMOVE BEFORE BUILD
 
 			Debug.Log("wallpaper are already collected");
-			//knifeCollected = 0;
+			wallpaperCollected = 0;
 
 
 			//-----------------------------------//

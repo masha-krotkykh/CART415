@@ -15,6 +15,7 @@ public class StateSwitch : MonoBehaviour
     private void Start()
     {
         SwitchVideos();
+        ShowObjects();
     }
 
     // Update is called once per frame
@@ -26,21 +27,51 @@ public class StateSwitch : MonoBehaviour
         {
             // switch between the two states back and forth
             showHidden = !showHidden;
-            SwitchVideos();
         }
+
+        SwitchVideos();
+        ShowObjects();
+        Debug.Log(showHidden);
+
+
     }
 
     public void SwitchVideos()
     {
+        hiddenBG = GameObject.FindGameObjectWithTag("HiddenBG");
+        realBG = GameObject.FindGameObjectWithTag("RealBG");
 
         // If the current state is "delirious" player sees what's hidden
         if (showHidden)
         {
+            // Same for the environment. Turn the "delirious" environment on
+            // and the "lucid" environment off through videoplayer component
 
-            hiddenObjects = GameObject.FindGameObjectsWithTag("Hidden");
-            realObjects = GameObject.FindGameObjectsWithTag("Real");
-            hiddenBG = GameObject.FindGameObjectWithTag("HiddenBG");
-            realBG = GameObject.FindGameObjectWithTag("RealBG");
+
+            hiddenBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = true;
+            realBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = false;
+        }
+
+
+        // Oposite situation in "lucid" state
+        else
+        {
+
+            hiddenBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = false;
+            realBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = true;
+        }
+    }
+
+
+
+    public void ShowObjects()
+    {
+        hiddenObjects = GameObject.FindGameObjectsWithTag("Hidden");
+        realObjects = GameObject.FindGameObjectsWithTag("Real");
+
+        // If the current state is "delirious" player sees what's hidden
+        if (showHidden)
+        {
 
             foreach (GameObject go in hiddenObjects)
             {
@@ -57,14 +88,6 @@ public class StateSwitch : MonoBehaviour
                 go.GetComponent<SpriteRenderer>().enabled = false;
                 go.GetComponent<BoxCollider2D>().enabled = false;
             }
-
-
-            // Same for the environment. Turn the "delirious" environment on
-            // and the "lucid" environment off through videoplayer component
-
-
-            hiddenBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = true;
-            realBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = false;
         }
 
 
@@ -72,11 +95,6 @@ public class StateSwitch : MonoBehaviour
         // hidden objects disappear and the real ones reappear
         else
         {
-
-            hiddenObjects = GameObject.FindGameObjectsWithTag("Hidden");
-            realObjects = GameObject.FindGameObjectsWithTag("Real");
-            hiddenBG = GameObject.FindGameObjectWithTag("HiddenBG");
-            realBG = GameObject.FindGameObjectWithTag("RealBG");
 
             foreach (GameObject go in hiddenObjects)
             {
@@ -91,11 +109,9 @@ public class StateSwitch : MonoBehaviour
                 go.GetComponent<BoxCollider2D>().enabled = true;
             }
 
-            hiddenBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = false;
-            realBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = true;
         }
     }
 
 
-    }
+}
 
