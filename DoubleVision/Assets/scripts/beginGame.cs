@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class beginGame : MonoBehaviour
+public class BeginGame : MonoBehaviour
 {
 
     public GameObject Panel;

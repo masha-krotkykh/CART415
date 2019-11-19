@@ -300,7 +300,6 @@ GameObject:
   m_Component:
   - component: {fileID: 633599423}
   - component: {fileID: 633599422}
-  - component: {fileID: 633599421}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -308,14 +307,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &633599421
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 633599420}
-  m_Enabled: 1
 --- !u!20 &633599422
 Camera:
   m_ObjectHideFlags: 0
@@ -391,12 +382,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658a50ae2085051428fa75d467fe280c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HatchetItem: {fileID: 1111694916309613215, guid: 76445cf9ea75445abb402da2c678aaac,
+  KnifeItem: {fileID: 1111694916309613215, guid: 76445cf9ea75445abb402da2c678aaac,
     type: 3}
   PillsItem: {fileID: 3571707916744046577, guid: d4f92a91de94a45bfa0c693edcad57ae,
     type: 3}
+  WallpaperItem: {fileID: 3571707916744046577, guid: caa614d3b433a4d2084d9718859a4be8,
+    type: 3}
+  NailItem: {fileID: 1111694916309613215, guid: 80ec268b98291412cb8e3bee8a14abba,
+    type: 3}
   ItemLabel: {fileID: 82760800}
-  CurrentItem: 
 --- !u!1 &685356448 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2781050489723328510, guid: 473a350e7288e4c7e955b91b63239008,
@@ -1175,7 +1169,7 @@ PrefabInstance:
     - target: {fileID: 2781050490315680789, guid: 473a350e7288e4c7e955b91b63239008,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 105
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 2781050490315680789, guid: 473a350e7288e4c7e955b91b63239008,
         type: 3}

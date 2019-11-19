@@ -5,14 +5,25 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    public Transform HatchetItem; //you need one prefab like this for each tiem
+    public Transform KnifeItem; //you need one prefab like this for each tiem
     public Transform PillsItem;
+    public Transform WallpaperItem;
+    public Transform NailItem;
+
+
+
     public Text ItemLabel; //this is only for debug, ideally you would have an image following the cursor
-    public string CurrentItem = ""; //this is the public variable that you can check to see if the current item is selected.
+   
+
+
+    // Creating static vars to be accessed from across multiple scenes
+
+    public static string CurrentItem = ""; //this is the public variable that you can check to see if the current item is selected.
+
+
 
     void Start()
     {
-        //PlayerPrefs.SetInt("hatchet", 0); //Remove this, only to make sure we have matches from the start
         UpdateInventory(); //Display what we have right now.
     }
 
@@ -24,6 +35,9 @@ public class InventoryManager : MonoBehaviour
         {
             SelectItem("none");
         }
+
+
+
     }
 
     public void SelectItem(string ItemName)
@@ -59,10 +73,11 @@ public class InventoryManager : MonoBehaviour
           foreach (Transform grandChild in child)
             Destroy(grandChild.gameObject);
         }
+
         //Then we add all the items we have. You need of these for each of your item
         if (PlayerPrefs.GetInt("knife")==1)
         {
-            Instantiate(HatchetItem, this.transform);
+            Instantiate(KnifeItem, this.transform);
         }
 
         if (PlayerPrefs.GetInt("pills")==1)
@@ -72,7 +87,12 @@ public class InventoryManager : MonoBehaviour
 
         if (PlayerPrefs.GetInt("wallpaper") == 1)
         {
-            Instantiate(PillsItem, this.transform);
+            Instantiate(WallpaperItem, this.transform);
+        }
+
+        if (PlayerPrefs.GetInt("nail") == 1)
+        {
+            Instantiate(NailItem, this.transform);
         }
     }
 

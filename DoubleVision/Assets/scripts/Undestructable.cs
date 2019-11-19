@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class undestructable : MonoBehaviour
+public class Undestructable : MonoBehaviour
 {
     // Start is called before the first frame update
     void Awake()

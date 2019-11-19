@@ -92,8 +92,6 @@ public class Interactions_00_back : MonoBehaviour
 		}
 
 
-        PlayerPrefs.SetInt("pillsCollected", pillsCollected);
-
 
 
         if (wallpaper != null)
@@ -110,6 +108,8 @@ public class Interactions_00_back : MonoBehaviour
 			wallpaperCollected = 1;
 		}
 
+
+        PlayerPrefs.SetInt("pillsCollected", pillsCollected);
         PlayerPrefs.SetInt("wallpaperCollected", wallpaperCollected);
 
     }
