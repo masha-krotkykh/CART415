@@ -21,8 +21,8 @@ public class Pickup : MonoBehaviour
         inventory = GameObject.FindGameObjectWithTag("EventSystem").GetComponent<Inventory>();
     }
 
-    // on mouse click look through the array of inventory slots to check is each of themis full
-    void OnMouseDown()
+    // look through the array of inventory slots to check is each of themis full
+    public void CollectItem()
     {
       for (int i = 0; i < inventory.slots.Length; i++)
       { // once we find the slot that is not full, we set it to full since we're adding a new item to it

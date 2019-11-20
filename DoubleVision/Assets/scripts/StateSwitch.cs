@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class StateSwitch : MonoBehaviour
 {
     // Script to switch between "lucid" and "delirious" states
+
     // By default set to "lucid"
     bool showHidden = false;
 
@@ -24,62 +25,44 @@ public class StateSwitch : MonoBehaviour
 
     // Update is called once per frame
     // Listens for th space bar press event
-    void Update()
+    public void SwitchLucid()
     {
-        // For now on spacebar key press environment changes from "lucid" to "delirious" and back
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            showHidden = !showHidden;
-            // Method to switch between background videos
-            SwitchVideos();
-            // Method to show and hide hidden and real objects 
-            ShowObjects();
-
-            //Debug.Log(showHidden);
-        }
-    }
-
-    // Since currently only initiation of the script and spacebar press check for the current player state, the state is not checked and reset to default when the scene changes.
-    // So, another event to trigger Switch methods is scene change. 
-    void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
-    {
-        SwitchVideos();
+        // Switch between two states
+        showHidden = false;
         ShowObjects();
-
-        Debug.Log(scene.name);
     }
 
-
-    // Method describing the switch between two types of background videos depending on players current state
-    public void SwitchVideos()
+    public void SwitchDelirious()
     {
-        hiddenBG = GameObject.FindGameObjectWithTag("HiddenBG");
-        realBG = GameObject.FindGameObjectWithTag("RealBG");
-
-        // If the current state is "delirious" player sees HiddenBG video
-        // If the current state is "lucid" player sees RealBG video
-        if (showHidden)
-        {
-            hiddenBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = true;
-            realBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = false;
-        }
-
-        else
-        {
-
-            hiddenBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = false;
-            realBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = true;
-        }
+        // Switch between two states
+        showHidden = true;
+        ShowObjects();
     }
+
+
+// Since currently the state is not checked and resets to default when the scene changes.
+// So, another event to trigger Switch methods is scene change. 
+void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+        ShowObjects();
+    }
+
 
 
     // Method describing switching between two typs of objects to be displayed 
     public void ShowObjects()
     {
+
         hiddenObjects = GameObject.FindGameObjectsWithTag("Hidden");
         realObjects = GameObject.FindGameObjectsWithTag("Real");
 
+        hiddenBG = GameObject.FindGameObjectWithTag("HiddenBG");
+        realBG = GameObject.FindGameObjectWithTag("RealBG");
+
+
         // If the current state is "delirious" player sees "hidden" interactable objects
+        // If the current state is "delirious" player sees HiddenBG video
+        // If the current state is "lucid" player sees RealBG video
         if (showHidden)
         {
 
@@ -97,6 +80,9 @@ public class StateSwitch : MonoBehaviour
                 go.GetComponent<SpriteRenderer>().enabled = false;
                 go.GetComponent<BoxCollider2D>().enabled = false;
             }
+
+            hiddenBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = true;
+            realBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = false;
         }
 
 
@@ -118,7 +104,12 @@ public class StateSwitch : MonoBehaviour
                 go.GetComponent<BoxCollider2D>().enabled = true;
             }
 
+
+            hiddenBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = false;
+            realBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = true;
         }
+
+
     }
 
 }

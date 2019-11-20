@@ -14,7 +14,6 @@ public class Interactions_00_front : MonoBehaviour
     public GameObject nail;
 
 
-
     // Start is called before the first frame update
     void Start()
     {

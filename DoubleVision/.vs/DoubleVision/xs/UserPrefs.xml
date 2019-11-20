@@ -1,7 +1,10 @@
 ﻿<Properties StartupConfiguration="{5F5779A9-0984-364F-21A5-98220FB504CA}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Doors.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Interactions_00_front.cs">
     <Files>
       <File FileName="Assets/scripts/Doors.cs" Line="33" Column="44" />
+      <File FileName="Assets/scripts/StateSwitch.cs" Line="11" Column="5" />
+      <File FileName="Assets/scripts/inventory/Pickup.cs" Line="45" Column="13" />
+      <File FileName="Assets/scripts/Interactions_00_front.cs" Line="115" Column="49" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
