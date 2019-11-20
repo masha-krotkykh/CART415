@@ -21,22 +21,20 @@ public class Interactions_00_back : MonoBehaviour
 		wallpaper = GameObject.Find("wallpaper");
 		pills = GameObject.Find("pills");
 
+        wallpaperCollected = 0;
+        pillsCollected = 0;
 
-		// Check if the object was aready collected on the previous visit
-		if (PlayerPrefs.GetInt("pillsCollected") == 1)
+
+        // Check if the object was aready collected on the previous visit
+        if (PlayerPrefs.GetInt("pillsCollected") == 1)
 		{
 			pillsCollected = 1;
 			// And destroy it from the scene 
-			// -------------------->> Destroy(pills);
+			// -------------------->>
+            Destroy(pills);
 
-			// TEMPORARY! REMOVE BEFORE BUILD
-
-			//Debug.Log("pills are already collected");
-			pillsCollected = 0;
-
-
-			//-----------------------------------//
 		}
+
 
 		else
 		{
@@ -44,19 +42,15 @@ public class Interactions_00_back : MonoBehaviour
 		}
 
 
+
+
+
 		if (PlayerPrefs.GetInt("wallpaperCollected") == 1)
 		{
 			wallpaperCollected = 1;
 			// And destroy it from the scene 
-			// --------------------> Destroy(wallpaper);
-
-			// TEMPORARY! REMOVE BEFORE BUILD
-
-			//Debug.Log("wallpaper are already collected");
-			wallpaperCollected = 0;
-
-
-			//-----------------------------------//
+			// -------------------->
+            Destroy(wallpaper);
 		}
 
 		else
@@ -64,6 +58,8 @@ public class Interactions_00_back : MonoBehaviour
 			wallpaperCollected = 0;
 		}
 	}
+
+
 
 
     // Instruct the button to take player to another scene "front of the room"
@@ -86,11 +82,6 @@ public class Interactions_00_back : MonoBehaviour
             }
         }
 
-        else if(pills == null)
-		{
-			pillsCollected = 1;
-		}
-
 
 
 
@@ -103,11 +94,14 @@ public class Interactions_00_back : MonoBehaviour
             }
         }
 
-        else if (wallpaper == null)
-		{
-			wallpaperCollected = 1;
-		}
 
+        //----------------------------------------------//
+        //-----------for TESTING ONLY REMOVE BEFORE BUILD
+
+        //wallpaperCollected = 0;
+        //pillsCollected = 0;
+
+        //----------------------------------------------//
 
         PlayerPrefs.SetInt("pillsCollected", pillsCollected);
         PlayerPrefs.SetInt("wallpaperCollected", wallpaperCollected);

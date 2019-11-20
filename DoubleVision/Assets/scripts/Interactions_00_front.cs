@@ -21,22 +21,19 @@ public class Interactions_00_front : MonoBehaviour
 		knife = GameObject.Find("knife");
         nail = GameObject.Find("nail");
 
+        knifeCollected = 0;
+        nailCollected = 0;
 
-		// Check if the object was aready collected on the previous visit
-		if (PlayerPrefs.GetInt("knifeCollected") == 1)
+
+        // Check if the object was aready collected on the previous visit
+        if (PlayerPrefs.GetInt("knifeCollected") == 1)
 		{
 			knifeCollected = 1;
 			// And destroy it from the scene 
-			// --------------------> Destroy(knife);
-
-			// TEMPORARY! REMOVE BEFORE BUILD
-
-			//Debug.Log("knife is already collected");
-			knifeCollected = 0;
-
-
-			//-----------------------------------//
+			// -------------------->
+            Destroy(knife);
 		}
+
 
         else
 		{
@@ -44,20 +41,18 @@ public class Interactions_00_front : MonoBehaviour
 		}
 
 
+
+
+
         if (PlayerPrefs.GetInt("nailCollected") == 1)
         {
             nailCollected = 1;
             // And destroy it from the scene 
-            // --------------------> Destroy(nail);
+            // -------------------->
+            Destroy(nail);
 
-            // TEMPORARY! REMOVE BEFORE BUILD
-
-            //Debug.Log("nail is already collected");
-            nailCollected = 0;
-
-
-            //-----------------------------------//
         }
+
 
         else
         {
@@ -88,11 +83,6 @@ public class Interactions_00_front : MonoBehaviour
             }
         }
 
-        else if (knife == null)
-		{
-			knifeCollected = 1;
-		}
-
 
         if (nail != null)
         {
@@ -103,11 +93,13 @@ public class Interactions_00_front : MonoBehaviour
             }
         }
 
-        else if (nail == null)
-        {
-            nailCollected = 1;
-        }
+        //----------------------------------------------//
+        //-----------for TESTING ONLY REMOVE BEFORE BUILD
 
+        //knifeCollected = 0;
+        //nailCollected = 0;
+
+        //---------------------------------------------//
 
 
         PlayerPrefs.SetInt("knifeCollected", knifeCollected);

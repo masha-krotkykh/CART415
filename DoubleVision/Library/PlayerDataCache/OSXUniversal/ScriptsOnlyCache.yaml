@@ -13,6 +13,7 @@ ScriptsOnlyBuild:
     - PopUp
     - StateSwitch
     - Undestructable
+    - Wallpaper
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -81,6 +82,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11066}
     - Class: 114
       Script: {instanceID: 11372}
+    - Class: 114
+      Script: {instanceID: 19260}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -606,7 +609,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: a03628869c4ee4eeeb4930994b71147a
+      Hash: 76c3e5f82c666de542bcb9b8cf4fd93a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Doors
@@ -748,6 +751,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 76c3e5f82c666de542bcb9b8cf4fd93a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Wallpaper
   platform: 2
   scenePathNames:
   - Assets/scenes/setup.unity
