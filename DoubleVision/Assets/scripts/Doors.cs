@@ -4,20 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Doors : MonoBehaviour
+public class Doors : Pickup
 {
-    public PopUp popup;
-
-    // variable for defining a name for every game object
-    public static string nameOfObject;
-    public static string popupMessage;
-
     public static bool doorIsReady = false; 
 
-   // public GameObject objectName;
-
    // functions to be called when a game object is clicked
-    void OnMouseDown()
+    public void TryDoor()
     {
         // naming an object by it's object name
         nameOfObject = gameObject.name;
@@ -28,6 +20,7 @@ public class Doors : MonoBehaviour
             Debug.Log("doors, Doors, DOORS!!!");
 
         }
+
         else if((InventoryManager.CurrentItem == "nail") && (doorIsReady == true))
         {
             Debug.Log("You're free to go");
