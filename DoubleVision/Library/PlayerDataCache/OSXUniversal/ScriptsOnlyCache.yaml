@@ -1,6 +1,8 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BeginGame
+    - Doors
     - Interactions_00_back
     - Interactions_00_front
     - Inventory
@@ -10,9 +12,7 @@ ScriptsOnlyBuild:
     - Pickup
     - PopUp
     - StateSwitch
-    - beginGame
-    - doors
-    - undestructable
+    - Undestructable
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -56,29 +56,31 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9706}
+      Script: {instanceID: 9670}
     - Class: 114
-      Script: {instanceID: 9874}
+      Script: {instanceID: 9734}
     - Class: 114
-      Script: {instanceID: 9914}
+      Script: {instanceID: 9824}
     - Class: 114
-      Script: {instanceID: 10156}
+      Script: {instanceID: 9864}
     - Class: 114
-      Script: {instanceID: 10356}
+      Script: {instanceID: 10078}
     - Class: 114
-      Script: {instanceID: 10752}
+      Script: {instanceID: 10236}
     - Class: 114
-      Script: {instanceID: 10974}
+      Script: {instanceID: 10572}
     - Class: 114
-      Script: {instanceID: 11018}
+      Script: {instanceID: 10776}
     - Class: 114
-      Script: {instanceID: 11258}
+      Script: {instanceID: 10818}
     - Class: 114
-      Script: {instanceID: 11294}
+      Script: {instanceID: 11022}
     - Class: 114
-      Script: {instanceID: 11310}
+      Script: {instanceID: 11054}
     - Class: 114
-      Script: {instanceID: 11656}
+      Script: {instanceID: 11066}
+    - Class: 114
+      Script: {instanceID: 11372}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -129,25 +131,29 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9706}
+      Script: {instanceID: 9670}
     - Class: 114
-      Script: {instanceID: 9874}
+      Script: {instanceID: 9734}
     - Class: 114
-      Script: {instanceID: 9914}
+      Script: {instanceID: 9824}
     - Class: 114
-      Script: {instanceID: 10102}
+      Script: {instanceID: 9864}
     - Class: 114
-      Script: {instanceID: 10752}
+      Script: {instanceID: 10028}
     - Class: 114
-      Script: {instanceID: 10974}
+      Script: {instanceID: 10572}
     - Class: 114
-      Script: {instanceID: 11018}
+      Script: {instanceID: 10776}
     - Class: 114
-      Script: {instanceID: 11196}
+      Script: {instanceID: 10818}
     - Class: 114
-      Script: {instanceID: 11258}
+      Script: {instanceID: 10970}
     - Class: 114
-      Script: {instanceID: 11294}
+      Script: {instanceID: 11022}
+    - Class: 114
+      Script: {instanceID: 11054}
+    - Class: 114
+      Script: {instanceID: 11308}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -189,44 +195,42 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9706}
+      Script: {instanceID: 9670}
     - Class: 114
-      Script: {instanceID: 9778}
+      Script: {instanceID: 9734}
     - Class: 114
-      Script: {instanceID: 9794}
+      Script: {instanceID: 9750}
     - Class: 114
-      Script: {instanceID: 9874}
+      Script: {instanceID: 9810}
     - Class: 114
-      Script: {instanceID: 9914}
+      Script: {instanceID: 9824}
     - Class: 114
-      Script: {instanceID: 10156}
+      Script: {instanceID: 9864}
     - Class: 114
-      Script: {instanceID: 10356}
+      Script: {instanceID: 10078}
     - Class: 114
-      Script: {instanceID: 10752}
+      Script: {instanceID: 10236}
     - Class: 114
-      Script: {instanceID: 10768}
+      Script: {instanceID: 10572}
     - Class: 114
-      Script: {instanceID: 10982}
+      Script: {instanceID: 10588}
     - Class: 114
-      Script: {instanceID: 11018}
+      Script: {instanceID: 10782}
     - Class: 114
-      Script: {instanceID: 11258}
+      Script: {instanceID: 10818}
     - Class: 114
-      Script: {instanceID: 11294}
+      Script: {instanceID: 11022}
     - Class: 114
-      Script: {instanceID: 11580}
+      Script: {instanceID: 11054}
     - Class: 114
-      Script: {instanceID: 11656}
+      Script: {instanceID: 11308}
     - Class: 114
-      Script: {instanceID: 17958}
+      Script: {instanceID: 11372}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -281,7 +285,7 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: undestructable
+    className: Undestructable
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -300,6 +304,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 9f54e90afea28775ebea5ef289593867
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BeginGame
   - hash:
       serializedVersion: 2
       Hash: 72712369a7c681ad84fc255a5ec0b333
@@ -374,7 +384,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: af525d60b83ef9d331b9be6e8a983c27
+      Hash: f6d397c1732ebef229d8210d070a12ed
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Interactions_00_front
@@ -599,7 +609,7 @@ ScriptsOnlyBuild:
       Hash: a03628869c4ee4eeeb4930994b71147a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: doors
+    className: Doors
   - hash:
       serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
@@ -662,7 +672,7 @@ ScriptsOnlyBuild:
     className: PlayModeRunnerCallback
   - hash:
       serializedVersion: 2
-      Hash: 7d42db42674179005e2569093b0f0e89
+      Hash: d979e2788a04008b888b7439751a8c3f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InventoryManager
@@ -738,15 +748,9 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 9f54e90afea28775ebea5ef289593867
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: beginGame
   platform: 2
   scenePathNames:
   - Assets/scenes/setup.unity
   - Assets/scenes/room_00_front.unity
   - Assets/scenes/room_00_back.unity
-  playerPath: /Users/masha/Desktop/CART415/DoubleVision/DV_test03.app
+  playerPath: /Users/m_krotky/Desktop/CART415/DoubleVision/dv_test_04.app

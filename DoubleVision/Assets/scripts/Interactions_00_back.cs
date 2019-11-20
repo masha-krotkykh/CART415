@@ -40,7 +40,7 @@ public class Interactions_00_back : MonoBehaviour
 
 		else
 		{
-			wallpaperCollected = 0;
+			pillsCollected = 0;
 		}
 
 

@@ -426,11 +426,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6344482151490848922, guid: b4279ab664ef84722beecb69bddd4a86,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 6344482150350268197, guid: b4279ab664ef84722beecb69bddd4a86,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -556,6 +551,11 @@ PrefabInstance:
       propertyPath: PopUpText
       value: 
       objectReference: {fileID: 1268750564}
+    - target: {fileID: 6344482151490848922, guid: b4279ab664ef84722beecb69bddd4a86,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6344482150350268196, guid: b4279ab664ef84722beecb69bddd4a86,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

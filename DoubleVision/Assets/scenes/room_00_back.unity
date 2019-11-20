@@ -619,16 +619,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PopUp
       objectReference: {fileID: 0}
-    - target: {fileID: 6344482151490848922, guid: b4279ab664ef84722beecb69bddd4a86,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6344482151490848922, guid: b4279ab664ef84722beecb69bddd4a86,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 6344482150350268197, guid: b4279ab664ef84722beecb69bddd4a86,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -754,6 +744,16 @@ PrefabInstance:
       propertyPath: PopUpText
       value: 
       objectReference: {fileID: 1268750564}
+    - target: {fileID: 6344482151490848922, guid: b4279ab664ef84722beecb69bddd4a86,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6344482151490848922, guid: b4279ab664ef84722beecb69bddd4a86,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 6344482150350268196, guid: b4279ab664ef84722beecb69bddd4a86,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1521,7 +1521,12 @@ PrefabInstance:
     - target: {fileID: 7702986823444623418, guid: 7732f2f50cd9149c0900655058e7d60d,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702986823444623418, guid: 7732f2f50cd9149c0900655058e7d60d,
+        type: 3}
+      propertyPath: m_AutoTiling
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7732f2f50cd9149c0900655058e7d60d, type: 3}
@@ -1543,18 +1548,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7702986823707035988 stripped
+--- !u!114 &7702986823707035988
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7702986823444623423, guid: 7732f2f50cd9149c0900655058e7d60d,
-    type: 3}
-  m_PrefabInstance: {fileID: 7702986823707035985}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7702986823707035986}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e837ea2a1b6cb4524ac0190a2f03c5f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f11b9f583cb84ceeb17d7b5e3e45183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popup: {fileID: 304772837}
+  itemButton: {fileID: 3571707916744046576, guid: caa614d3b433a4d2084d9718859a4be8,
+    type: 3}
+  collected: 0
 --- !u!114 &7702986823707035989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1599,7 +1608,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7702986823707035988}
-        m_MethodName: CollectItem
+        m_MethodName: CutWallpaper
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
