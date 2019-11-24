@@ -73,33 +73,33 @@ public class Interactions_00_back : MonoBehaviour
     // and save this value for future visits
     public void SaveVars()
     {
-        if (pills != null)
-        {
-            Pickup pickup = pills.GetComponent<Pickup>();
-            if (pickup.collected == true)
-            {
-                pillsCollected = 1;
-            }
-        }
+        //if (pills != null)
+        //{
+        //    Pickup pickup = pills.GetComponent<Pickup>();
+        //    if (pickup.collected == true)
+        //    {
+        //        pillsCollected = 1;
+        //    }
+        //}
 
 
 
 
-        if (wallpaper != null)
-        {
-            Pickup pickup = wallpaper.GetComponent<Pickup>();
-            if (pickup.collected == true)
-            {
-                wallpaperCollected = 1;
-            }
-        }
+        //if (wallpaper != null)
+        //{
+        //    Pickup pickup = wallpaper.GetComponent<Pickup>();
+        //    if (pickup.collected == true)
+        //    {
+        //        wallpaperCollected = 1;
+        //    }
+        //}
 
 
         //----------------------------------------------//
         //-----------for TESTING ONLY REMOVE BEFORE BUILD
 
-        //wallpaperCollected = 0;
-        //pillsCollected = 0;
+        wallpaperCollected = 0;
+        pillsCollected = 0;
 
         //----------------------------------------------//
 

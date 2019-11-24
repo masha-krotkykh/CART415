@@ -1,33 +1,19 @@
 ﻿<Properties StartupConfiguration="{5F5779A9-0984-364F-21A5-98220FB504CA}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Wallpaper.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/inventory/Pickup.cs">
     <Files>
       <File FileName="Assets/scripts/Doors.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/StateSwitch.cs" />
-      <File FileName="Assets/scripts/inventory/Pickup.cs" />
-      <File FileName="Assets/scripts/Interactions_00_front.cs" Line="51" Column="38" />
+      <File FileName="Assets/scripts/StateSwitch.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/inventory/Pickup.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Interactions_00_front.cs" Line="51" Column="37" />
       <File FileName="Assets/scripts/beginGame.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/Interactions_00_back.cs" Line="40" Column="1" />
       <File FileName="Assets/scripts/inventory/InventoryManager.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/Wallpaper.cs" Line="7" Column="20" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="DoubleVision" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="scripts" expanded="True">
-                <Node name="inventory" expanded="True" />
-                <Node name="Wallpaper.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4734b738-d97d-4d97-9349-db8cf0f05722" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
