@@ -9,7 +9,7 @@ public class InventoryManager : MonoBehaviour
     public Transform PillsItem;
     public Transform WallpaperItem;
     public Transform NailItem;
-
+    public Transform CrowbarItem;
 
 
     public Text ItemLabel; //this is only for debug, ideally you would have an image following the cursor

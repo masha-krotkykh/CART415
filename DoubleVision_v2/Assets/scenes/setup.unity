@@ -390,6 +390,8 @@ MonoBehaviour:
     type: 3}
   NailItem: {fileID: 1111694916309613215, guid: 80ec268b98291412cb8e3bee8a14abba,
     type: 3}
+  CrowbarItem: {fileID: 1111694916309613215, guid: 98fd3fc6664f1495abc93160a07282d7,
+    type: 3}
   ItemLabel: {fileID: 82760800}
 --- !u!1 &685356448 stripped
 GameObject:

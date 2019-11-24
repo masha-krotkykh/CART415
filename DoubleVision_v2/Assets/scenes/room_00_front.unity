@@ -1534,7 +1534,7 @@ SpriteRenderer:
   m_Size: {x: 5.22, y: 8.74}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1661168480
@@ -2194,8 +2194,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8335697046336597289}
-        m_MethodName: SwitchDelirious
+      - m_Target: {fileID: 8335697046336597292}
+        m_MethodName: PullNail
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2205,18 +2205,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8335697046336597291}
-        m_MethodName: CollectItem
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &8335697046336597291
+--- !u!114 &8335697046336597292
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2225,10 +2214,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8335697046336597286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e837ea2a1b6cb4524ac0190a2f03c5f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d0fcebc249544169918b6113cbc6af6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   popup: {fileID: 1222379300}
   itemButton: {fileID: 4338449720572041125, guid: 80ec268b98291412cb8e3bee8a14abba,
     type: 3}
   collected: 0
+  stateSwitch: {fileID: 8335697046336597289}

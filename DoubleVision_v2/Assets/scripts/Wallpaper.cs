@@ -16,8 +16,6 @@ public class Wallpaper : Pickup
         if (InventoryManager.CurrentItem == "knife")
         {
             CollectItem();
-
-            Debug.Log("Cut it!!!");
         }
 
         else

@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5F5779A9-0984-364F-21A5-98220FB504CA}</ProjectGuid>
+    <ProjectGuid>{FF814AAD-301A-D345-A2E7-A68B3016605F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -71,36 +71,37 @@
     <Compile Include="Assets\scripts\inventory\InventoryManager.cs" />
     <Compile Include="Assets\scripts\inventory\InventoryOpener.cs" />
     <Compile Include="Assets\scripts\inventory\Pickup.cs" />
+    <Compile Include="Assets\scripts\Nail.cs" />
     <Compile Include="Assets\scripts\PopUp.cs" />
     <Compile Include="Assets\scripts\StateSwitch.cs" />
     <Compile Include="Assets\scripts\Undestructable.cs" />
     <Compile Include="Assets\scripts\Wallpaper.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>/Users/masha/Desktop/CART415 copy/DoubleVision/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>/Users/masha/Desktop/CART415/DoubleVision_v2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>/Users/masha/Desktop/CART415 copy/DoubleVision/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>/Users/masha/Desktop/CART415/DoubleVision_v2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/masha/Desktop/CART415 copy/DoubleVision/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/masha/Desktop/CART415/DoubleVision_v2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/masha/Desktop/CART415 copy/DoubleVision/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>/Users/masha/Desktop/CART415/DoubleVision_v2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>/Users/masha/Desktop/CART415 copy/DoubleVision/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>/Users/masha/Desktop/CART415/DoubleVision_v2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/masha/Desktop/CART415 copy/DoubleVision/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/masha/Desktop/CART415/DoubleVision_v2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>/Users/masha/Desktop/CART415 copy/DoubleVision/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>/Users/masha/Desktop/CART415/DoubleVision_v2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/masha/Desktop/CART415 copy/DoubleVision/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/masha/Desktop/CART415/DoubleVision_v2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/masha/Desktop/CART415 copy/DoubleVision/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>/Users/masha/Desktop/CART415/DoubleVision_v2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.2.9f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

@@ -8,9 +8,12 @@ public class Interactions_00_back : MonoBehaviour
 {
     public int pillsCollected = 0;
     public int wallpaperCollected = 0;
+    public int crowbarCollected = 0;
 
     public GameObject pills;
     public GameObject wallpaper;
+    public GameObject crowbar;
+
 
 
 
@@ -20,9 +23,11 @@ public class Interactions_00_back : MonoBehaviour
 		// Targeting GameObjects to get access to their properties set in other scripts
 		wallpaper = GameObject.Find("wallpaper");
 		pills = GameObject.Find("pills");
+        crowbar = GameObject.Find("crowbar");
 
         wallpaperCollected = 0;
         pillsCollected = 0;
+        crowbarCollected = 0;
 
 
         // Check if the object was aready collected on the previous visit
@@ -57,7 +62,23 @@ public class Interactions_00_back : MonoBehaviour
 		{
 			wallpaperCollected = 0;
 		}
-	}
+
+
+
+
+        if (PlayerPrefs.GetInt("crowbarCollected") == 1)
+        {
+            crowbarCollected = 1;
+            // And destroy it from the scene 
+            // -------------------->
+            Destroy(crowbar);
+        }
+
+        else
+        {
+            crowbarCollected = 0;
+        }
+    }
 
 
 
@@ -100,11 +121,13 @@ public class Interactions_00_back : MonoBehaviour
 
         wallpaperCollected = 0;
         pillsCollected = 0;
+        crowbarCollected = 0;
 
         //----------------------------------------------//
 
         PlayerPrefs.SetInt("pillsCollected", pillsCollected);
         PlayerPrefs.SetInt("wallpaperCollected", wallpaperCollected);
+        PlayerPrefs.SetInt("crowbarCollected", crowbarCollected);
 
     }
 }
