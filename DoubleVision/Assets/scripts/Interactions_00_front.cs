@@ -74,30 +74,30 @@ public class Interactions_00_front : MonoBehaviour
     // and save this value for future visits
     public void SaveVars()
     {
-        //if (knife != null)
-        //{
-        //    Pickup pickup = knife.GetComponent<Pickup>();
-        //    if (pickup.collected == true)
-        //    {
-        //        knifeCollected = 1;
-        //    }
-        //}
+        if (knife != null)
+        {
+            Pickup pickup = knife.GetComponent<Pickup>();
+            if (pickup.collected == true)
+            {
+                knifeCollected = 1;
+            }
+        }
 
 
-        //if (nail != null)
-        //{
-        //    Pickup pickup = nail.GetComponent<Pickup>();
-        //    if (pickup.collected == true)
-        //    {
-        //        nailCollected = 1;
-        //    }
-        //}
+        if (nail != null)
+        {
+            Pickup pickup = nail.GetComponent<Pickup>();
+            if (pickup.collected == true)
+            {
+                nailCollected = 1;
+            }
+        }
 
         //----------------------------------------------//
         //-----------for TESTING ONLY REMOVE BEFORE BUILD
 
-        knifeCollected = 0;
-        nailCollected = 0;
+        //knifeCollected = 0;
+        //nailCollected = 0;
 
         //---------------------------------------------//
 

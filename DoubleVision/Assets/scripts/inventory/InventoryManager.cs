@@ -51,7 +51,6 @@ public class InventoryManager : MonoBehaviour
         //We remove the item from playerprefs and select nothing
         PlayerPrefs.SetInt(ItemName, 0);
         SelectItem("none");
-
         //Update the visual inventory
         UpdateInventory();
     }
@@ -61,7 +60,6 @@ public class InventoryManager : MonoBehaviour
         //We add the item to playerprefs and select the item
         PlayerPrefs.SetInt(ItemName, 1);
         SelectItem(ItemName);
-
         //Update the visual inventory
         UpdateInventory();
     }
@@ -73,32 +71,29 @@ public class InventoryManager : MonoBehaviour
         {
 
           foreach (Transform grandChild in child)
-            {
-                Destroy(grandChild.gameObject);
-            }
-            
+            Destroy(grandChild.gameObject);
         }
 
         //Then we add all the items we have. You need of these for each of your item
-        //if (PlayerPrefs.GetInt("knife")==1)
-        //{
-        //    Instantiate(KnifeItem, this.transform);
-        //}
+        if (PlayerPrefs.GetInt("knife")==1)
+        {
+            Instantiate(KnifeItem, this.transform);
+        }
 
-        //if (PlayerPrefs.GetInt("pills")==1)
-        //{
-        //    Instantiate(PillsItem, this.transform);
-        //}
+        if (PlayerPrefs.GetInt("pills")==1)
+        {
+            Instantiate(PillsItem, this.transform);
+        }
 
-        //if (PlayerPrefs.GetInt("wallpaper") == 1)
-        //{
-        //    Instantiate(WallpaperItem, this.transform);
-        //}
+        if (PlayerPrefs.GetInt("wallpaper") == 1)
+        {
+            Instantiate(WallpaperItem, this.transform);
+        }
 
-        //if (PlayerPrefs.GetInt("nail") == 1)
-        //{
-        //    Instantiate(NailItem, this.transform);
-        //}
+        if (PlayerPrefs.GetInt("nail") == 1)
+        {
+            Instantiate(NailItem, this.transform);
+        }
     }
 
 }
