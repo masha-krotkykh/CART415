@@ -973,8 +973,8 @@ GameObject:
   - component: {fileID: 1133799819}
   - component: {fileID: 1133799818}
   - component: {fileID: 1133799817}
-  - component: {fileID: 1133799816}
   - component: {fileID: 1133799822}
+  - component: {fileID: 1133799816}
   m_Layer: 0
   m_Name: knife
   m_TagString: Hidden
