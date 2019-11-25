@@ -16,14 +16,14 @@ public class Wallpaper : Pickup
         if (InventoryManager.CurrentItem == "knife")
         {
             CollectItem();
+            popupMessage = "This bloody dogear has been bugging me for years!";
         }
 
         else
         {
             // getting individual message from game object component to display in a popup
             popupMessage = gameObject.GetComponent<Text>().text;
-            popup.ShowPopUp(popupMessage);
         }
-
+        popup.ShowPopUp(popupMessage);
     }
 }

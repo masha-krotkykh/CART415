@@ -68,8 +68,17 @@ void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
 
             foreach (GameObject go in hiddenObjects)
             {
-                go.GetComponent<SpriteRenderer>().enabled = true;
-                go.GetComponent<BoxCollider2D>().enabled = true;
+                if(go.GetComponent<BoxCollider2D>() != null)
+                {
+                    go.GetComponent<BoxCollider2D>().enabled = true;
+                }
+
+                if (go.GetComponent<SpriteRenderer>() != null)
+                {
+                    go.GetComponent<SpriteRenderer>().enabled = true;
+                }
+
+
             }
 
 
@@ -77,8 +86,15 @@ void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
 
             foreach (GameObject go in realObjects)
             {
-                go.GetComponent<SpriteRenderer>().enabled = false;
-                go.GetComponent<BoxCollider2D>().enabled = false;
+                if (go.GetComponent<BoxCollider2D>() != null)
+                {
+                    go.GetComponent<BoxCollider2D>().enabled = false;
+                }
+
+                if (go.GetComponent<SpriteRenderer>() != null)
+                {
+                    go.GetComponent<SpriteRenderer>().enabled = false;
+                }
             }
 
             hiddenBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = true;
@@ -93,15 +109,29 @@ void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
 
             foreach (GameObject go in hiddenObjects)
             {
-                go.GetComponent<SpriteRenderer>().enabled = false;
-                go.GetComponent<BoxCollider2D>().enabled = false;
+                if (go.GetComponent<BoxCollider2D>() != null)
+                {
+                    go.GetComponent<BoxCollider2D>().enabled = false;
+                }
+
+                if (go.GetComponent<SpriteRenderer>() != null)
+                {
+                    go.GetComponent<SpriteRenderer>().enabled = false;
+                }
             }
 
 
             foreach (GameObject go in realObjects)
             {
-                go.GetComponent<SpriteRenderer>().enabled = true;
-                go.GetComponent<BoxCollider2D>().enabled = true;
+                if (go.GetComponent<BoxCollider2D>() != null)
+                {
+                    go.GetComponent<BoxCollider2D>().enabled = true;
+                }
+
+                if (go.GetComponent<SpriteRenderer>() != null)
+                {
+                    go.GetComponent<SpriteRenderer>().enabled = true;
+                }
             }
 
 

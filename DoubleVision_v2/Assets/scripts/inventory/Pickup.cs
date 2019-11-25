@@ -35,11 +35,10 @@ public class Pickup : MonoBehaviour
             // Naming the object by its object name
             nameOfObject = gameObject.name;
             Debug.Log("You found " + nameOfObject);
-            //Getting an individual message from gameObject to display in a popup
-            popupMessage = gameObject.GetComponent<Text>().text;
-            popup.ShowPopUp(popupMessage);
-            // Destroy the game object from the scene
+        
+            ShowPopup();
 
+            // Destroy the game object from the scene
             Destroy(gameObject);
             //gameObject.SetActive(false);
 
@@ -50,5 +49,12 @@ public class Pickup : MonoBehaviour
            break;
         }
       }
+    }
+
+    public void ShowPopup()
+    {
+        //Getting an individual message from gameObject to display in a popup
+        popupMessage = gameObject.GetComponent<Text>().text;
+        popup.ShowPopUp(popupMessage);
     }
 }

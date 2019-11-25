@@ -19,7 +19,7 @@ public class Nail : Pickup
         {
             CollectItem();
             stateSwitch.SwitchDelirious();
-            popupMessage = "Who knew this would come in handy!";
+            popupMessage = "What the.... No... Well, at least I've got the stupid nail. Might as well take my eyes out with it. You know... to stop seeing this...";
         }
 
         else
