@@ -182,7 +182,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -392,7 +392,7 @@ MonoBehaviour:
     type: 3}
   CrowbarItem: {fileID: 1111694916309613215, guid: 98fd3fc6664f1495abc93160a07282d7,
     type: 3}
-  ItemLabel: {fileID: 82760800}
+  ItemLabel: {fileID: 1268750564}
 --- !u!1 &685356448 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2781050489723328510, guid: 473a350e7288e4c7e955b91b63239008,
@@ -1430,22 +1430,22 @@ PrefabInstance:
     - target: {fileID: 6640827322075922191, guid: 9e68e6a6fa67f40709bfa2eaa291aec6,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1898
+      value: 106
       objectReference: {fileID: 0}
     - target: {fileID: 6640827322075922191, guid: 9e68e6a6fa67f40709bfa2eaa291aec6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 20
+      value: 78
       objectReference: {fileID: 0}
     - target: {fileID: 6640827322075922191, guid: 9e68e6a6fa67f40709bfa2eaa291aec6,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 40
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6640827322075922191, guid: 9e68e6a6fa67f40709bfa2eaa291aec6,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 6640827322075922191, guid: 9e68e6a6fa67f40709bfa2eaa291aec6,
         type: 3}
@@ -1482,5 +1482,31 @@ PrefabInstance:
       propertyPath: Panel
       value: 
       objectReference: {fileID: 646231624}
+    - target: {fileID: 6640827322075922177, guid: 9e68e6a6fa67f40709bfa2eaa291aec6,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8794cb12ea2ee4ea89cfa39c551c1025,
+        type: 3}
+    - target: {fileID: 6640827322075922177, guid: 9e68e6a6fa67f40709bfa2eaa291aec6,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6640827322075922177, guid: 9e68e6a6fa67f40709bfa2eaa291aec6,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 6640827322075922177, guid: 9e68e6a6fa67f40709bfa2eaa291aec6,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 6640827322075922177, guid: 9e68e6a6fa67f40709bfa2eaa291aec6,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.509434
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e68e6a6fa67f40709bfa2eaa291aec6, type: 3}

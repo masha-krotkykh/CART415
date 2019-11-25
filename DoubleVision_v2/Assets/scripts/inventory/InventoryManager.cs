@@ -36,9 +36,8 @@ public class InventoryManager : MonoBehaviour
             SelectItem("none");
         }
 
-
-
     }
+
 
     public void SelectItem(string ItemName)
     {
@@ -46,6 +45,9 @@ public class InventoryManager : MonoBehaviour
         CurrentItem = ItemName;
         ItemLabel.text = ItemName;
     }
+
+
+
     public void RemoveItem(string ItemName)
     {
         //We remove the item from playerprefs and select nothing
@@ -56,6 +58,8 @@ public class InventoryManager : MonoBehaviour
         UpdateInventory();
     }
 
+
+
     public void AddItem(string ItemName)
     {
         //We add the item to playerprefs and select the item
@@ -65,6 +69,8 @@ public class InventoryManager : MonoBehaviour
         //Update the visual inventory
         UpdateInventory();
     }
+
+
 
     public void UpdateInventory()
     {

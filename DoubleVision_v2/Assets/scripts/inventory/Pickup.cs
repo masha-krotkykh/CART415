@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pickup : MonoBehaviour
+public class Pickup : InventoryManager
 {
   public PopUp popup;
 
@@ -54,7 +54,7 @@ public class Pickup : MonoBehaviour
     public void ShowPopup()
     {
         //Getting an individual message from gameObject to display in a popup
-        popupMessage = gameObject.GetComponent<Text>().text;
-        popup.ShowPopUp(popupMessage);
+            popupMessage = gameObject.GetComponent<Text>().text;
+            popup.ShowPopUp(popupMessage);
     }
 }
