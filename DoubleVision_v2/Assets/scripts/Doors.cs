@@ -11,6 +11,14 @@ public class Doors : Pickup
     public GameObject wpFloor;
     public GameObject keyFloor;
 
+    public int wpInstalled;
+    public int keyInstalled;
+
+    private void Start()
+    {
+
+    }
+
     // functions to be called when a game object is clicked
     public void TryDoor()
     {
@@ -25,6 +33,7 @@ public class Doors : Pickup
             wpFloor.GetComponent<SpriteRenderer>().enabled = true;
             popupMessage = "Now we're getting somewhere";
 
+            PlayerPrefs.SetInt("wpInstalled", 1);
         }
 
         else if((InventoryManager.CurrentItem == "nail") && (doorIsReady == true))
@@ -34,6 +43,8 @@ public class Doors : Pickup
             keyFloor.GetComponent<SpriteRenderer>().enabled = true;
             keyFloor.GetComponent<BoxCollider2D>().enabled = true;
             keyFloor.GetComponent<Button>().enabled = true;
+ 
+            PlayerPrefs.SetInt("keyInstalled", 1);
         }
 
         else if(InventoryManager.CurrentItem == "key")
@@ -48,4 +59,8 @@ public class Doors : Pickup
         }
         popup.ShowPopUp(popupMessage);
     }
+
+
+
+
 }

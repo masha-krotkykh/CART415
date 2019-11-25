@@ -17,10 +17,23 @@ public class StateSwitch : MonoBehaviour
     GameObject hiddenBG;
     GameObject realBG;
 
+    public static int currentState = 0;
+
     // After the script starts it starts listenning for the scene change event 
     private void Start()
     {
         SceneManager.sceneLoaded += OnSceneFinishedLoading;
+        if (PlayerPrefs.GetInt("currentState") == 1)
+        {
+            showHidden = true;
+            ShowObjects();
+        }
+
+        else
+        {
+            showHidden = false;
+            ShowObjects();
+        }
     }
 
     // Update is called once per frame
@@ -28,15 +41,21 @@ public class StateSwitch : MonoBehaviour
     public void SwitchLucid()
     {
         // Switch between two states
+        SceneManager.sceneLoaded += OnSceneFinishedLoading;
+        currentState = 0;
         showHidden = false;
         ShowObjects();
+        PlayerPrefs.SetInt("currentState", currentState);
     }
 
     public void SwitchDelirious()
     {
         // Switch between two states
+        SceneManager.sceneLoaded += OnSceneFinishedLoading;
+        currentState = 1;
         showHidden = true;
         ShowObjects();
+        PlayerPrefs.SetInt("currentState", currentState);
     }
 
 
