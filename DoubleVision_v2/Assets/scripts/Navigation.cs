@@ -69,7 +69,7 @@ public class Navigation : MonoBehaviour
             wpFloor.GetComponent<SpriteRenderer>().enabled = true;
         }
 
-        if((keyFloor != null) && (PlayerPrefs.GetInt("keyInstalled") == 1))
+        if((keyFloor != null) && (PlayerPrefs.GetInt("keyInstalled") == 1) && (PlayerPrefs.GetInt("keyCollected") == 0))
         {
             keyFloor.GetComponent<SpriteRenderer>().enabled = true;
             keyFloor.GetComponent<BoxCollider2D>().enabled = true;

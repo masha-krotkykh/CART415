@@ -18,6 +18,7 @@ public class Pickup : InventoryManager
     public static int pillsCollected = 0;
     public static int wallpaperCollected = 0;
     public static int crowbarCollected = 0;
+    public static int keyCollected = 0;
 
 
     // Start is called before the first frame update
@@ -73,7 +74,12 @@ public class Pickup : InventoryManager
                 crowbarCollected = 1;
             }
 
-            SaveVars();
+            if (nameOfObject == "key")
+            {
+                keyCollected = 1;
+            }
+
+                SaveVars();
 
             // and the loop stops
             break;
@@ -97,7 +103,7 @@ public class Pickup : InventoryManager
         PlayerPrefs.SetInt("pillsCollected", pillsCollected);
         PlayerPrefs.SetInt("wallpaperCollected", wallpaperCollected);
         PlayerPrefs.SetInt("crowbarCollected", crowbarCollected);
-
+        PlayerPrefs.SetInt("keyCollected", keyCollected);
 
 
 
