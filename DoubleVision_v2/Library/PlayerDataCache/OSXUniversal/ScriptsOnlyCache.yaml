@@ -3,13 +3,14 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - BeginGame
     - Doors
-    - Interactions_00_back
-    - Interactions_00_front
     - Inventory
     - InventoryItem
     - InventoryManager
     - InventoryOpener
+    - Nail
+    - Navigation
     - Pickup
+    - Pills
     - PopUp
     - StateSwitch
     - Undestructable
@@ -67,23 +68,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10078}
     - Class: 114
-      Script: {instanceID: 10236}
+      Script: {instanceID: 10234}
     - Class: 114
-      Script: {instanceID: 10572}
+      Script: {instanceID: 10340}
     - Class: 114
-      Script: {instanceID: 10776}
+      Script: {instanceID: 10570}
     - Class: 114
-      Script: {instanceID: 10818}
+      Script: {instanceID: 10772}
     - Class: 114
-      Script: {instanceID: 11022}
+      Script: {instanceID: 10814}
     - Class: 114
-      Script: {instanceID: 11054}
+      Script: {instanceID: 11018}
     - Class: 114
-      Script: {instanceID: 11066}
+      Script: {instanceID: 11050}
     - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11368}
     - Class: 114
-      Script: {instanceID: 19260}
+      Script: {instanceID: 100778}
+    - Class: 114
+      Script: {instanceID: 111822}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -142,21 +145,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9864}
     - Class: 114
-      Script: {instanceID: 10028}
+      Script: {instanceID: 10570}
     - Class: 114
-      Script: {instanceID: 10572}
+      Script: {instanceID: 10772}
     - Class: 114
-      Script: {instanceID: 10776}
+      Script: {instanceID: 10814}
     - Class: 114
-      Script: {instanceID: 10818}
+      Script: {instanceID: 10966}
     - Class: 114
-      Script: {instanceID: 10970}
+      Script: {instanceID: 11018}
     - Class: 114
-      Script: {instanceID: 11022}
+      Script: {instanceID: 11050}
     - Class: 114
-      Script: {instanceID: 11054}
+      Script: {instanceID: 19728}
     - Class: 114
-      Script: {instanceID: 11308}
+      Script: {instanceID: 111822}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -217,23 +220,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10078}
     - Class: 114
-      Script: {instanceID: 10236}
+      Script: {instanceID: 10234}
     - Class: 114
-      Script: {instanceID: 10572}
+      Script: {instanceID: 10570}
     - Class: 114
-      Script: {instanceID: 10588}
+      Script: {instanceID: 10586}
     - Class: 114
-      Script: {instanceID: 10782}
+      Script: {instanceID: 10778}
     - Class: 114
-      Script: {instanceID: 10818}
+      Script: {instanceID: 10814}
     - Class: 114
-      Script: {instanceID: 11022}
+      Script: {instanceID: 11018}
     - Class: 114
-      Script: {instanceID: 11054}
+      Script: {instanceID: 11050}
     - Class: 114
-      Script: {instanceID: 11308}
+      Script: {instanceID: 11304}
     - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11368}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -387,12 +390,6 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: f6d397c1732ebef229d8210d070a12ed
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Interactions_00_front
-  - hash:
-      serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -441,12 +438,6 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 27c30076a5bc55c98768bb0208945c50
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DialogueTrigger
-  - hash:
-      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -475,6 +466,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 26c2f4ec6bea16d2866e09716abcefc0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Wallpaper
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -537,12 +534,6 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DialogueManager
-  - hash:
-      serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -555,7 +546,7 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
-      Hash: 76c3e5f82c666de542bcb9b8cf4fd93a
+      Hash: 26c2f4ec6bea16d2866e09716abcefc0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Pickup
@@ -609,7 +600,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 76c3e5f82c666de542bcb9b8cf4fd93a
+      Hash: 40130f4c196119d928b5dd607ca6103d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Doors
@@ -637,12 +628,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PopUp
-  - hash:
-      serializedVersion: 2
-      Hash: 67d84075c96e2b2a933404ab8221c7aa
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Interactions_00_back
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -675,7 +660,7 @@ ScriptsOnlyBuild:
     className: PlayModeRunnerCallback
   - hash:
       serializedVersion: 2
-      Hash: d979e2788a04008b888b7439751a8c3f
+      Hash: c338edc95af424fb7294883fd9721938
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InventoryManager
@@ -753,13 +738,25 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 76c3e5f82c666de542bcb9b8cf4fd93a
+      Hash: 38628b3f4e0002c2d9d745ccdc24f86a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Wallpaper
+    className: Nail
+  - hash:
+      serializedVersion: 2
+      Hash: 26c2f4ec6bea16d2866e09716abcefc0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Pills
+  - hash:
+      serializedVersion: 2
+      Hash: 5b535734e174d1e838a779703d939daa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Navigation
   platform: 2
   scenePathNames:
   - Assets/scenes/setup.unity
   - Assets/scenes/room_00_front.unity
   - Assets/scenes/room_00_back.unity
-  playerPath: /Users/m_krotky/Desktop/CART415/DoubleVision/dv_test_04.app
+  playerPath: /Users/masha/Desktop/CART415/DoubleVision_v2/DV_test05.app

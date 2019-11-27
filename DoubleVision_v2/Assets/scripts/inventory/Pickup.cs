@@ -5,21 +5,26 @@ using UnityEngine.UI;
 
 public class Pickup : InventoryManager
 {
-  public PopUp popup;
+    public PopUp popup;
 
-  public static string nameOfObject;
-  public static string popupMessage;
+    public static string nameOfObject;
+    public static string popupMessage;
 
-  private Inventory inventory;
-  public GameObject itemButton;
-  public bool collected = false;
+    private Inventory inventory;
+    public GameObject itemButton;
+
+    public static int knifeCollected = 0;
+    public static int nailCollected = 0;
+    public static int pillsCollected = 0;
+    public static int wallpaperCollected = 0;
+    public static int crowbarCollected = 0;
 
 
     // Start is called before the first frame update
     private void Start()
-    {
-        inventory = GameObject.FindGameObjectWithTag("EventSystem").GetComponent<Inventory>();
-    }
+        {
+            inventory = GameObject.FindGameObjectWithTag("EventSystem").GetComponent<Inventory>();
+        }
 
     // look through the array of inventory slots to check is each of themis full
     public void CollectItem()
@@ -40,15 +45,41 @@ public class Pickup : InventoryManager
 
             // Destroy the game object from the scene
             Destroy(gameObject);
-            //gameObject.SetActive(false);
 
 
-           // Set the state to "collected"
-            collected = true;
-           // and the loop stops
-           break;
+            // Set the state to "collected"
+            if (nameOfObject == "knife")
+            {
+                knifeCollected = 1;
+            }
+
+            if (nameOfObject == "nail")
+            {
+                nailCollected = 1;
+            }
+
+            if (nameOfObject == "wallpaper")
+            {
+                wallpaperCollected = 1;
+            }
+
+            if (nameOfObject == "pills")
+            {
+                pillsCollected = 1;
+            }
+
+            if (nameOfObject == "crowbar")
+            {
+                crowbarCollected = 1;
+            }
+
+            SaveVars();
+
+            // and the loop stops
+            break;
         }
       }
+
     }
 
     public void ShowPopup()
@@ -57,4 +88,26 @@ public class Pickup : InventoryManager
             popupMessage = gameObject.GetComponent<Text>().text;
             popup.ShowPopUp(popupMessage);
     }
+
+    // Save variable values for future 
+    public void SaveVars()
+    {
+        PlayerPrefs.SetInt("knifeCollected", knifeCollected);
+        PlayerPrefs.SetInt("nailCollected", nailCollected);
+        PlayerPrefs.SetInt("pillsCollected", pillsCollected);
+        PlayerPrefs.SetInt("wallpaperCollected", wallpaperCollected);
+        PlayerPrefs.SetInt("crowbarCollected", crowbarCollected);
+
+
+
+
+        // -------------------- TEST REMOVE ON BUILD ------------------ //
+        //PlayerPrefs.SetInt("knifeCollected", 0);
+        //PlayerPrefs.SetInt("nailCollected", 0);
+        //PlayerPrefs.SetInt("pillsCollected", 0);
+        //PlayerPrefs.SetInt("wallpaperCollected", 0);
+        //PlayerPrefs.SetInt("crowbarCollected", 0);
+    }
+
+
 }

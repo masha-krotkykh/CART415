@@ -6,18 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class Doors : Pickup
 {
-    public static bool doorIsReady = false;
 
     public GameObject wpFloor;
     public GameObject keyFloor;
+    public GameObject portal;
 
     public int wpInstalled;
     public int keyInstalled;
+    public int doorIsReady;
+    public int doorIsOpen;
 
-    private void Start()
-    {
-
-    }
 
     // functions to be called when a game object is clicked
     public void TryDoor()
@@ -27,28 +25,31 @@ public class Doors : Pickup
 
         if(InventoryManager.CurrentItem == "wallpaper")
         {
-            doorIsReady = true;
-            Debug.Log("doors, Doors, DOORS!!!");
-            wpFloor = GameObject.Find("wp_inv");
-            wpFloor.GetComponent<SpriteRenderer>().enabled = true;
-            popupMessage = "Now we're getting somewhere";
+            wpInstalled = 1;
+            PlayerPrefs.SetInt("wpInstalled", wpInstalled);
 
-            PlayerPrefs.SetInt("wpInstalled", 1);
+            doorIsReady = 1;
+            PlayerPrefs.SetInt("doorIsReady", doorIsReady);
+
+            DisplayWallpaper();
+            popupMessage = "Now we're getting somewhere";
         }
 
-        else if((InventoryManager.CurrentItem == "nail") && (doorIsReady == true))
+        else if((InventoryManager.CurrentItem == "nail") && (PlayerPrefs.GetInt("doorIsReady") == 1))
         {
-            Debug.Log("You're free to go");
-            keyFloor = GameObject.Find("key");
-            keyFloor.GetComponent<SpriteRenderer>().enabled = true;
-            keyFloor.GetComponent<BoxCollider2D>().enabled = true;
-            keyFloor.GetComponent<Button>().enabled = true;
- 
-            PlayerPrefs.SetInt("keyInstalled", 1);
+            keyInstalled = 1;
+            PlayerPrefs.SetInt("keyInstalled", keyInstalled);
+
+            DisplayKey();
         }
 
         else if(InventoryManager.CurrentItem == "key")
         {
+            portal = GameObject.Find("portal");
+            portal.GetComponent<SpriteRenderer>().enabled = true;
+            doorIsOpen = 1;
+
+            PlayerPrefs.SetInt("doorIsOpen", doorIsOpen);
             popupMessage = "Sweet smell of freedom!";
         }
 
@@ -61,6 +62,23 @@ public class Doors : Pickup
     }
 
 
+    public void DisplayWallpaper()
+    {
+    
+        wpFloor = GameObject.Find("wp_inv");
+        wpFloor.GetComponent<SpriteRenderer>().enabled = true;
 
+    }
+
+
+
+    public void DisplayKey()
+    {
+        keyFloor = GameObject.Find("key");
+        keyFloor.GetComponent<SpriteRenderer>().enabled = true;
+        keyFloor.GetComponent<BoxCollider2D>().enabled = true;
+        keyFloor.GetComponent<Button>().enabled = true;
+
+    }
 
 }

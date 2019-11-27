@@ -268,6 +268,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6654290381182320035, guid: 7912d98304e3a474b8e272a48ac839cd,
         type: 3}
+    - target: {fileID: 534486094522190087, guid: 4e3aa9e1d23704b22a67eb967dc9bd14,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6698657605030978293, guid: 4e3aa9e1d23704b22a67eb967dc9bd14,
         type: 3}
       propertyPath: m_Color.a
@@ -296,18 +301,27 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 35920543}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &35920545 stripped
+--- !u!114 &35920545
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 534486094522190087, guid: 4e3aa9e1d23704b22a67eb967dc9bd14,
-    type: 3}
-  m_PrefabInstance: {fileID: 35920543}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35920544}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e837ea2a1b6cb4524ac0190a2f03c5f1, type: 3}
+  m_Script: {fileID: 11500000, guid: a696337a3ed7649dab8e9a21d3c574a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnifeItem: {fileID: 0}
+  PillsItem: {fileID: 0}
+  WallpaperItem: {fileID: 0}
+  NailItem: {fileID: 0}
+  CrowbarItem: {fileID: 0}
+  ItemLabel: {fileID: 0}
+  popup: {fileID: 304772837}
+  itemButton: {fileID: 6654290381182320035, guid: 7912d98304e3a474b8e272a48ac839cd,
+    type: 3}
 --- !u!114 &35920546 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1367413062914206403, guid: 4e3aa9e1d23704b22a67eb967dc9bd14,
@@ -364,7 +378,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 35920545}
-        m_MethodName: CollectItem
+        m_MethodName: PickupPills
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -526,7 +540,6 @@ MonoBehaviour:
   popup: {fileID: 304772837}
   itemButton: {fileID: 4338449720572041125, guid: 98fd3fc6664f1495abc93160a07282d7,
     type: 3}
-  collected: 0
 --- !u!61 &48459065
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -756,7 +769,6 @@ MonoBehaviour:
   ItemLabel: {fileID: 0}
   popup: {fileID: 304772837}
   itemButton: {fileID: 0}
-  collected: 0
 --- !u!114 &219376457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1307,15 +1319,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1442408891}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8c78abcff8584a64935a70e9b9e5340, type: 3}
+  m_Script: {fileID: 11500000, guid: bf3017622d0b9457aae33a3da868f8e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pillsCollected: 0
-  wallpaperCollected: 0
-  crowbarCollected: 0
-  pills: {fileID: 35920544}
-  wallpaper: {fileID: 7702986823707035986}
+  pills: {fileID: 0}
+  wallpaper: {fileID: 0}
   crowbar: {fileID: 0}
+  knife: {fileID: 0}
+  nail: {fileID: 0}
 --- !u!114 &1442408894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1360,7 +1371,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1442408893}
-        m_MethodName: GoFront
+        m_MethodName: GoFront00
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1639,7 +1650,6 @@ MonoBehaviour:
   ItemLabel: {fileID: 0}
   popup: {fileID: 304772837}
   itemButton: {fileID: 0}
-  collected: 0
 --- !u!114 &1829678342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1785,7 +1795,6 @@ GameObject:
   - component: {fileID: 1936204360}
   - component: {fileID: 1936204359}
   - component: {fileID: 1936204358}
-  - component: {fileID: 1936204362}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1878,27 +1887,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1936204362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936204357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e837ea2a1b6cb4524ac0190a2f03c5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  KnifeItem: {fileID: 0}
-  PillsItem: {fileID: 0}
-  WallpaperItem: {fileID: 0}
-  NailItem: {fileID: 0}
-  CrowbarItem: {fileID: 0}
-  ItemLabel: {fileID: 0}
-  popup: {fileID: 304772837}
-  itemButton: {fileID: 0}
-  collected: 0
 --- !u!1 &2108587151
 GameObject:
   m_ObjectHideFlags: 0
@@ -2132,7 +2120,7 @@ PrefabInstance:
     - target: {fileID: 7702986823444623422, guid: 7732f2f50cd9149c0900655058e7d60d,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7702986823444623423, guid: 7732f2f50cd9149c0900655058e7d60d,
         type: 3}
@@ -2190,7 +2178,6 @@ MonoBehaviour:
   popup: {fileID: 304772837}
   itemButton: {fileID: 3571707916744046576, guid: caa614d3b433a4d2084d9718859a4be8,
     type: 3}
-  collected: 0
 --- !u!114 &7702986823707035989
 MonoBehaviour:
   m_ObjectHideFlags: 0
