@@ -293,7 +293,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 534486094522190087, guid: 4e3aa9e1d23704b22a67eb967dc9bd14, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4e3aa9e1d23704b22a67eb967dc9bd14, type: 3}
 --- !u!1 &35920544 stripped
 GameObject:
@@ -319,6 +320,8 @@ MonoBehaviour:
   NailItem: {fileID: 0}
   CrowbarItem: {fileID: 0}
   ItemLabel: {fileID: 0}
+  PickupSound: {fileID: 8300000, guid: 893438713fcae48f988da51a86c0c35c, type: 3}
+  PickupSoundSource: {fileID: 0}
   popup: {fileID: 304772837}
   itemButton: {fileID: 6654290381182320035, guid: 7912d98304e3a474b8e272a48ac839cd,
     type: 3}
@@ -537,6 +540,8 @@ MonoBehaviour:
   NailItem: {fileID: 0}
   CrowbarItem: {fileID: 0}
   ItemLabel: {fileID: 0}
+  PickupSound: {fileID: 8300000, guid: 893438713fcae48f988da51a86c0c35c, type: 3}
+  PickupSoundSource: {fileID: 0}
   popup: {fileID: 304772837}
   itemButton: {fileID: 4338449720572041125, guid: 98fd3fc6664f1495abc93160a07282d7,
     type: 3}
@@ -767,6 +772,8 @@ MonoBehaviour:
   NailItem: {fileID: 0}
   CrowbarItem: {fileID: 0}
   ItemLabel: {fileID: 0}
+  PickupSound: {fileID: 0}
+  PickupSoundSource: {fileID: 0}
   popup: {fileID: 304772837}
   itemButton: {fileID: 0}
 --- !u!114 &219376457
@@ -1327,6 +1334,9 @@ MonoBehaviour:
   crowbar: {fileID: 0}
   knife: {fileID: 0}
   nail: {fileID: 0}
+  wpFloor: {fileID: 0}
+  keyFloor: {fileID: 0}
+  portal: {fileID: 0}
 --- !u!114 &1442408894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1573,7 +1583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.531564, y: -2.2625687}
+  m_AnchoredPosition: {x: 2.52, y: -2.26}
   m_SizeDelta: {x: 0.51, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1829678340
@@ -1648,6 +1658,8 @@ MonoBehaviour:
   NailItem: {fileID: 0}
   CrowbarItem: {fileID: 0}
   ItemLabel: {fileID: 0}
+  PickupSound: {fileID: 0}
+  PickupSoundSource: {fileID: 0}
   popup: {fileID: 304772837}
   itemButton: {fileID: 0}
 --- !u!114 &1829678342
@@ -2127,6 +2139,11 @@ PrefabInstance:
       propertyPath: popup
       value: 
       objectReference: {fileID: 304772837}
+    - target: {fileID: 7702986823444623423, guid: 7732f2f50cd9149c0900655058e7d60d,
+        type: 3}
+      propertyPath: PickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 893438713fcae48f988da51a86c0c35c, type: 3}
     - target: {fileID: 7702986823444623418, guid: 7732f2f50cd9149c0900655058e7d60d,
         type: 3}
       propertyPath: m_Enabled
@@ -2175,6 +2192,8 @@ MonoBehaviour:
   NailItem: {fileID: 0}
   CrowbarItem: {fileID: 0}
   ItemLabel: {fileID: 0}
+  PickupSound: {fileID: 8300000, guid: 893438713fcae48f988da51a86c0c35c, type: 3}
+  PickupSoundSource: {fileID: 0}
   popup: {fileID: 304772837}
   itemButton: {fileID: 3571707916744046576, guid: caa614d3b433a4d2084d9718859a4be8,
     type: 3}

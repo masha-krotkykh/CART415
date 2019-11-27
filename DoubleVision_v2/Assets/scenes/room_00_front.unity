@@ -338,6 +338,9 @@ MonoBehaviour:
   crowbar: {fileID: 0}
   knife: {fileID: 0}
   nail: {fileID: 0}
+  wpFloor: {fileID: 0}
+  keyFloor: {fileID: 0}
+  portal: {fileID: 0}
 --- !u!114 &134757696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,6 +699,8 @@ MonoBehaviour:
   NailItem: {fileID: 0}
   CrowbarItem: {fileID: 0}
   ItemLabel: {fileID: 0}
+  PickupSound: {fileID: 0}
+  PickupSoundSource: {fileID: 0}
   popup: {fileID: 1222379300}
   itemButton: {fileID: 0}
 --- !u!114 &376997007
@@ -899,6 +904,8 @@ MonoBehaviour:
   NailItem: {fileID: 0}
   CrowbarItem: {fileID: 0}
   ItemLabel: {fileID: 0}
+  PickupSound: {fileID: 8300000, guid: 893438713fcae48f988da51a86c0c35c, type: 3}
+  PickupSoundSource: {fileID: 0}
   popup: {fileID: 1222379300}
   itemButton: {fileID: 4338449720572041125, guid: 2371aacb396944797ac63c204b405cf0,
     type: 3}
@@ -1348,6 +1355,8 @@ MonoBehaviour:
   NailItem: {fileID: 0}
   CrowbarItem: {fileID: 0}
   ItemLabel: {fileID: 0}
+  PickupSound: {fileID: 8300000, guid: 893438713fcae48f988da51a86c0c35c, type: 3}
+  PickupSoundSource: {fileID: 0}
   popup: {fileID: 1222379300}
   itemButton: {fileID: 4338449720572041125, guid: 76445cf9ea75445abb402da2c678aaac,
     type: 3}
@@ -1618,6 +1627,8 @@ MonoBehaviour:
   NailItem: {fileID: 0}
   CrowbarItem: {fileID: 0}
   ItemLabel: {fileID: 0}
+  PickupSound: {fileID: 0}
+  PickupSoundSource: {fileID: 0}
   popup: {fileID: 1222379300}
   itemButton: {fileID: 0}
 --- !u!114 &1051083842
@@ -2005,6 +2016,8 @@ MonoBehaviour:
   NailItem: {fileID: 0}
   CrowbarItem: {fileID: 0}
   ItemLabel: {fileID: 0}
+  PickupSound: {fileID: 0}
+  PickupSoundSource: {fileID: 0}
   popup: {fileID: 1222379300}
   itemButton: {fileID: 0}
 --- !u!114 &1468797274
@@ -2189,6 +2202,8 @@ MonoBehaviour:
   NailItem: {fileID: 0}
   CrowbarItem: {fileID: 0}
   ItemLabel: {fileID: 0}
+  PickupSound: {fileID: 0}
+  PickupSoundSource: {fileID: 0}
   popup: {fileID: 1222379300}
   itemButton: {fileID: 0}
 --- !u!114 &1547789824
@@ -2325,6 +2340,8 @@ MonoBehaviour:
   NailItem: {fileID: 0}
   CrowbarItem: {fileID: 0}
   ItemLabel: {fileID: 0}
+  PickupSound: {fileID: 8300000, guid: 893438713fcae48f988da51a86c0c35c, type: 3}
+  PickupSoundSource: {fileID: 0}
   popup: {fileID: 1222379300}
   itemButton: {fileID: 0}
   wpFloor: {fileID: 0}
@@ -2332,6 +2349,8 @@ MonoBehaviour:
   portal: {fileID: 0}
   wpInstalled: 0
   keyInstalled: 0
+  doorIsReady: 0
+  doorIsOpen: 0
 --- !u!222 &1651557407
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2783,6 +2802,8 @@ MonoBehaviour:
   NailItem: {fileID: 0}
   CrowbarItem: {fileID: 0}
   ItemLabel: {fileID: 0}
+  PickupSound: {fileID: 0}
+  PickupSoundSource: {fileID: 0}
   popup: {fileID: 1222379300}
   itemButton: {fileID: 0}
 --- !u!114 &1670471754
@@ -3259,6 +3280,8 @@ MonoBehaviour:
   NailItem: {fileID: 0}
   CrowbarItem: {fileID: 0}
   ItemLabel: {fileID: 0}
+  PickupSound: {fileID: 8300000, guid: 893438713fcae48f988da51a86c0c35c, type: 3}
+  PickupSoundSource: {fileID: 0}
   popup: {fileID: 1222379300}
   itemButton: {fileID: 4338449720572041125, guid: 80ec268b98291412cb8e3bee8a14abba,
     type: 3}

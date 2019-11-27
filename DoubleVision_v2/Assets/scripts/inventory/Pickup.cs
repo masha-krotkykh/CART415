@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class Pickup : InventoryManager
 {
+    public AudioClip PickupSound;
+    public AudioSource PickupSoundSource;
+
     public PopUp popup;
 
     public static string nameOfObject;
@@ -22,16 +25,18 @@ public class Pickup : InventoryManager
 
 
     // Start is called before the first frame update
-    private void Start()
+    void Start()
         {
             inventory = GameObject.FindGameObjectWithTag("EventSystem").GetComponent<Inventory>();
+            
         }
 
     // look through the array of inventory slots to check is each of themis full
     public void CollectItem()
     {
-      for (int i = 0; i < inventory.slots.Length; i++)
-      { // once we find the slot that is not full, we set it to full since we're adding a new item to it
+        for (int i = 0; i < inventory.slots.Length; i++)
+      { 
+        // once we find the slot that is not full, we set it to full since we're adding a new item to it
         if(inventory.isFull[i] == false)
         {
             // Item can be added
@@ -43,6 +48,12 @@ public class Pickup : InventoryManager
             Debug.Log("You found " + nameOfObject);
         
             ShowPopup();
+
+
+
+            PickupSoundSource = GameObject.Find("PickupSound").GetComponent<AudioSource>();
+            PickupSoundSource.clip = PickupSound;
+            PickupSoundSource.Play();
 
             // Destroy the game object from the scene
             Destroy(gameObject);
@@ -104,15 +115,6 @@ public class Pickup : InventoryManager
         PlayerPrefs.SetInt("wallpaperCollected", wallpaperCollected);
         PlayerPrefs.SetInt("crowbarCollected", crowbarCollected);
         PlayerPrefs.SetInt("keyCollected", keyCollected);
-
-
-
-        // -------------------- TEST REMOVE ON BUILD ------------------ //
-        //PlayerPrefs.SetInt("knifeCollected", 0);
-        //PlayerPrefs.SetInt("nailCollected", 0);
-        //PlayerPrefs.SetInt("pillsCollected", 0);
-        //PlayerPrefs.SetInt("wallpaperCollected", 0);
-        //PlayerPrefs.SetInt("crowbarCollected", 0);
     }
 
 
