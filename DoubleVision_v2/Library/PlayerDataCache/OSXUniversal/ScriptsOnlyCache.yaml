@@ -201,6 +201,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
     - Class: 104
@@ -600,7 +604,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 40130f4c196119d928b5dd607ca6103d
+      Hash: 2fd77f426ec80ceec36f6ebf5c0a6958
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Doors
@@ -750,7 +754,7 @@ ScriptsOnlyBuild:
     className: Pills
   - hash:
       serializedVersion: 2
-      Hash: 5b535734e174d1e838a779703d939daa
+      Hash: 82bce814d305dea3f236ed04edc3b6cf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Navigation

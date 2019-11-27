@@ -12,6 +12,8 @@ TagManager:
   - RealBG
   - HiddenBG
   - Video
+  - HiddenAudio
+  - RealAudio
   layers:
   - Default
   - TransparentFX

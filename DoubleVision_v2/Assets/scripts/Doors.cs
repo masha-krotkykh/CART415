@@ -50,7 +50,7 @@ public class Doors : Pickup
             doorIsOpen = 1;
 
             PlayerPrefs.SetInt("doorIsOpen", doorIsOpen);
-            popupMessage = "Sweet smell of freedom!";
+            popupMessage = "I guess my room is not so bad after all.";
         }
 
         else

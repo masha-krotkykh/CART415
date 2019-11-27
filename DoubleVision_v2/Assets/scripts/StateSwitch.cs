@@ -16,6 +16,8 @@ public class StateSwitch : MonoBehaviour
     GameObject[] realObjects;
     GameObject hiddenBG;
     GameObject realBG;
+    GameObject hiddenAudio;
+    GameObject realAudio;
 
     public static int currentState = 0;
 
@@ -68,7 +70,7 @@ void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
 
 
 
-    // Method describing switching between two typs of objects to be displayed 
+    // Method describing switching between two types of objects to be displayed 
     public void ShowObjects()
     {
 
@@ -78,9 +80,12 @@ void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
         hiddenBG = GameObject.FindGameObjectWithTag("HiddenBG");
         realBG = GameObject.FindGameObjectWithTag("RealBG");
 
+        hiddenAudio = GameObject.FindGameObjectWithTag("HiddenAudio");
+        realAudio = GameObject.FindGameObjectWithTag("RealAudio");
+
 
         // If the current state is "delirious" player sees "hidden" interactable objects
-        // If the current state is "delirious" player sees HiddenBG video
+        // If the current state is "delirious" player sees HiddenBG video and HiddenAudio sound
         // If the current state is "lucid" player sees RealBG video
         if (showHidden)
         {
@@ -118,6 +123,9 @@ void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
 
             hiddenBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = true;
             realBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = false;
+            hiddenAudio.GetComponent<AudioSource>().enabled = true;
+            realAudio.GetComponent<AudioSource>().pitch = -0.35f;
+            realAudio.GetComponent<AudioSource>().volume = 0.5f;
         }
 
 
@@ -156,6 +164,9 @@ void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
 
             hiddenBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = false;
             realBG.GetComponent<UnityEngine.Video.VideoPlayer>().enabled = true;
+            hiddenAudio.GetComponent<AudioSource>().enabled = false;
+            realAudio.GetComponent<AudioSource>().pitch = 0.35f;
+            realAudio.GetComponent<AudioSource>().volume = 0.144f;
         }
 
 
