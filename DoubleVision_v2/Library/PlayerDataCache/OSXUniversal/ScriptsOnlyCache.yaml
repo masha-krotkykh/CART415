@@ -53,6 +53,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
     - Class: 104
@@ -131,6 +133,8 @@ ScriptsOnlyBuild:
     - Class: 64
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
@@ -472,7 +476,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 26c2f4ec6bea16d2866e09716abcefc0
+      Hash: 593acf771d40f346853ceb4faafa2a39
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Wallpaper
@@ -550,7 +554,7 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
-      Hash: 26c2f4ec6bea16d2866e09716abcefc0
+      Hash: 593acf771d40f346853ceb4faafa2a39
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Pickup
@@ -604,7 +608,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 2fd77f426ec80ceec36f6ebf5c0a6958
+      Hash: 525287fbd9e50af5f315f46f7d8a4770
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Doors
@@ -742,13 +746,13 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 38628b3f4e0002c2d9d745ccdc24f86a
+      Hash: 1c4f092769eeb8b58a44318ef9370252
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Nail
   - hash:
       serializedVersion: 2
-      Hash: 26c2f4ec6bea16d2866e09716abcefc0
+      Hash: 593acf771d40f346853ceb4faafa2a39
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Pills
