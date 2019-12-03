@@ -23,12 +23,14 @@ public class Pickup : InventoryManager
     public static int crowbarCollected = 0;
     public static int keyCollected = 0;
 
+    public GameObject crowbar;
+
 
     // Start is called before the first frame update
     void Start()
         {
             inventory = GameObject.FindGameObjectWithTag("EventSystem").GetComponent<Inventory>();
-            
+
         }
 
     // look through the array of inventory slots to check is each of themis full
@@ -50,7 +52,7 @@ public class Pickup : InventoryManager
             ShowPopup();
 
 
-
+            // Play sound when an object is being picked up
             PickupSoundSource = GameObject.Find("PickupSound").GetComponent<AudioSource>();
             PickupSoundSource.clip = PickupSound;
             PickupSoundSource.Play();
@@ -68,6 +70,8 @@ public class Pickup : InventoryManager
             if (nameOfObject == "nail")
             {
                 nailCollected = 1;
+                crowbar = GameObject.Find("Crowbar");
+                Destroy(crowbar);
             }
 
             if (nameOfObject == "wallpaper")

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Navigation : MonoBehaviour
 {
-
+    //declare variables for all interactible objects
     public GameObject pills;
     public GameObject wallpaper;
     public GameObject crowbar;
@@ -35,6 +35,8 @@ public class Navigation : MonoBehaviour
         portal = GameObject.Find("portal");
 
 
+        // Check userprefs if an item has already been collected
+        //If it is collected, delete its instance from the scene
         if ((pills != null) && (PlayerPrefs.GetInt("pillsCollected") == 1))
         {
             Destroy(pills);
@@ -62,13 +64,15 @@ public class Navigation : MonoBehaviour
         }
 
 
-
+        // Chec userprefs if wallpaper has already been installed in its correct position
         if ((wpFloor != null) && (PlayerPrefs.GetInt("wpInstalled") == 1))
         {
 
             wpFloor.GetComponent<SpriteRenderer>().enabled = true;
         }
 
+        // Check userprefs if the key was already found but not yet collected
+        // In this case instantiate key object
         if((keyFloor != null) && (PlayerPrefs.GetInt("keyInstalled") == 1) && (PlayerPrefs.GetInt("keyCollected") == 0))
         {
             keyFloor.GetComponent<SpriteRenderer>().enabled = true;
@@ -83,6 +87,7 @@ public class Navigation : MonoBehaviour
 
     }
 
+    // Methods for back and front buttons
     public void GoBack00()
     {
         //SaveVars();

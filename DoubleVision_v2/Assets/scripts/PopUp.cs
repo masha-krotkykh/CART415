@@ -12,13 +12,12 @@ public class PopUp : MonoBehaviour
         gameObject.SetActive(true);
         PopUpText.text = text;
         StartCoroutine("WaitForSec");
-
     }
 
     IEnumerator WaitForSec()
     {
-      yield return new WaitForSeconds(5);
-      gameObject.SetActive(false);
+        yield return new WaitForSeconds(5);
+        gameObject.SetActive(false);
     }
 
     public void HidePopUp()

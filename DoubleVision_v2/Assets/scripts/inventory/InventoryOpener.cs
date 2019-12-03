@@ -18,4 +18,10 @@ public class InventoryOpener : MonoBehaviour
         }
     }
 
+   
+    public void HidePanel()
+    {
+        Panel.SetActive(false);
+    }
+
 }
