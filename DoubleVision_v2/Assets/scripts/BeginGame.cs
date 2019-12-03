@@ -29,6 +29,7 @@ public class BeginGame : MonoBehaviour
         PlayerPrefs.SetInt("wpInstalled", 0);
         PlayerPrefs.SetInt("keyInstalled", 0);
         PlayerPrefs.SetInt("doorIsOpen", 0);
+        PlayerPrefs.SetInt("doorIsReady", 0);
 
         SceneManager.LoadScene("room_00_front");
     }
