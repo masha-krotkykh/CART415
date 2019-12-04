@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StateSwitch : MonoBehaviour
 {
@@ -102,6 +103,10 @@ void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
                     go.GetComponent<SpriteRenderer>().enabled = true;
                 }
 
+                if (go.GetComponent<Button>() != null)
+                {
+                    go.GetComponent<Button>().enabled = true;
+                }
 
             }
 
@@ -118,6 +123,11 @@ void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
                 if (go.GetComponent<SpriteRenderer>() != null)
                 {
                     go.GetComponent<SpriteRenderer>().enabled = false;
+                }
+
+                if (go.GetComponent<Button>() != null)
+                {
+                    go.GetComponent<Button>().enabled = false;
                 }
             }
 
@@ -145,6 +155,11 @@ void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
                 {
                     go.GetComponent<SpriteRenderer>().enabled = false;
                 }
+
+                if (go.GetComponent<Button>() != null)
+                {
+                    go.GetComponent<Button>().enabled = false;
+                }
             }
 
 
@@ -158,6 +173,11 @@ void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
                 if (go.GetComponent<SpriteRenderer>() != null)
                 {
                     go.GetComponent<SpriteRenderer>().enabled = true;
+                }
+
+                if (go.GetComponent<Button>() != null)
+                {
+                    go.GetComponent<Button>().enabled = true;
                 }
             }
 
