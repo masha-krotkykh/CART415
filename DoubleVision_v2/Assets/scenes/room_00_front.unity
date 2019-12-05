@@ -693,12 +693,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e837ea2a1b6cb4524ac0190a2f03c5f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnifeItem: {fileID: 0}
-  PillsItem: {fileID: 0}
-  WallpaperItem: {fileID: 0}
-  NailItem: {fileID: 0}
-  CrowbarItem: {fileID: 0}
-  ItemLabel: {fileID: 0}
   PickupSound: {fileID: 0}
   PickupSoundSource: {fileID: 0}
   popup: {fileID: 1222379300}
@@ -898,12 +892,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e837ea2a1b6cb4524ac0190a2f03c5f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnifeItem: {fileID: 0}
-  PillsItem: {fileID: 0}
-  WallpaperItem: {fileID: 0}
-  NailItem: {fileID: 0}
-  CrowbarItem: {fileID: 0}
-  ItemLabel: {fileID: 0}
   PickupSound: {fileID: 8300000, guid: 893438713fcae48f988da51a86c0c35c, type: 3}
   PickupSoundSource: {fileID: 0}
   popup: {fileID: 1222379300}
@@ -1349,12 +1337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e837ea2a1b6cb4524ac0190a2f03c5f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnifeItem: {fileID: 0}
-  PillsItem: {fileID: 0}
-  WallpaperItem: {fileID: 0}
-  NailItem: {fileID: 0}
-  CrowbarItem: {fileID: 0}
-  ItemLabel: {fileID: 0}
   PickupSound: {fileID: 8300000, guid: 893438713fcae48f988da51a86c0c35c, type: 3}
   PickupSoundSource: {fileID: 0}
   popup: {fileID: 1222379300}
@@ -1621,12 +1603,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e837ea2a1b6cb4524ac0190a2f03c5f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnifeItem: {fileID: 0}
-  PillsItem: {fileID: 0}
-  WallpaperItem: {fileID: 0}
-  NailItem: {fileID: 0}
-  CrowbarItem: {fileID: 0}
-  ItemLabel: {fileID: 0}
   PickupSound: {fileID: 0}
   PickupSoundSource: {fileID: 0}
   popup: {fileID: 1222379300}
@@ -1682,6 +1658,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1134956331}
   - component: {fileID: 1134956332}
+  - component: {fileID: 1134956334}
+  - component: {fileID: 1134956333}
+  - component: {fileID: 1134956335}
   m_Layer: 0
   m_Name: portal
   m_TagString: Untagged
@@ -1752,6 +1731,106 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1134956333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134956330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3017622d0b9457aae33a3da868f8e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pills: {fileID: 0}
+  wallpaper: {fileID: 0}
+  crowbar: {fileID: 0}
+  knife: {fileID: 0}
+  nail: {fileID: 0}
+  wpFloor: {fileID: 0}
+  keyFloor: {fileID: 0}
+  portal: {fileID: 0}
+--- !u!114 &1134956334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134956330}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 406889698}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1134956333}
+        m_MethodName: EndGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!61 &1134956335
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134956330}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.32, y: 6.88}
+    newSize: {x: 3.32, y: 6.88}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.32, y: 6.88}
+  m_EdgeRadius: 0
 --- !u!1 &1138557397
 GameObject:
   m_ObjectHideFlags: 0
@@ -2010,12 +2089,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e837ea2a1b6cb4524ac0190a2f03c5f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnifeItem: {fileID: 0}
-  PillsItem: {fileID: 0}
-  WallpaperItem: {fileID: 0}
-  NailItem: {fileID: 0}
-  CrowbarItem: {fileID: 0}
-  ItemLabel: {fileID: 0}
   PickupSound: {fileID: 0}
   PickupSoundSource: {fileID: 0}
   popup: {fileID: 1222379300}
@@ -2196,12 +2269,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e837ea2a1b6cb4524ac0190a2f03c5f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnifeItem: {fileID: 0}
-  PillsItem: {fileID: 0}
-  WallpaperItem: {fileID: 0}
-  NailItem: {fileID: 0}
-  CrowbarItem: {fileID: 0}
-  ItemLabel: {fileID: 0}
   PickupSound: {fileID: 0}
   PickupSoundSource: {fileID: 0}
   popup: {fileID: 1222379300}
@@ -2334,12 +2401,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dffccaebbc8674ea594748e1ecd2ed0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnifeItem: {fileID: 0}
-  PillsItem: {fileID: 0}
-  WallpaperItem: {fileID: 0}
-  NailItem: {fileID: 0}
-  CrowbarItem: {fileID: 0}
-  ItemLabel: {fileID: 0}
   PickupSound: {fileID: 8300000, guid: 893438713fcae48f988da51a86c0c35c, type: 3}
   PickupSoundSource: {fileID: 0}
   popup: {fileID: 1222379300}
@@ -2796,12 +2857,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e837ea2a1b6cb4524ac0190a2f03c5f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnifeItem: {fileID: 0}
-  PillsItem: {fileID: 0}
-  WallpaperItem: {fileID: 0}
-  NailItem: {fileID: 0}
-  CrowbarItem: {fileID: 0}
-  ItemLabel: {fileID: 0}
   PickupSound: {fileID: 0}
   PickupSoundSource: {fileID: 0}
   popup: {fileID: 1222379300}
@@ -3274,12 +3329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d0fcebc249544169918b6113cbc6af6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnifeItem: {fileID: 0}
-  PillsItem: {fileID: 0}
-  WallpaperItem: {fileID: 0}
-  NailItem: {fileID: 0}
-  CrowbarItem: {fileID: 0}
-  ItemLabel: {fileID: 0}
   PickupSound: {fileID: 8300000, guid: 893438713fcae48f988da51a86c0c35c, type: 3}
   PickupSoundSource: {fileID: 0}
   popup: {fileID: 1222379300}

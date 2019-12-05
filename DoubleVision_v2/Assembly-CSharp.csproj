@@ -64,13 +64,12 @@
   <ItemGroup>
     <Compile Include="Assets\scripts\BeginGame.cs" />
     <Compile Include="Assets\scripts\Doors.cs" />
-    <Compile Include="Assets\scripts\Interactions_00_back.cs" />
-    <Compile Include="Assets\scripts\Interactions_00_front.cs" />
     <Compile Include="Assets\scripts\inventory\Inventory.cs" />
     <Compile Include="Assets\scripts\inventory\InventoryItem.cs" />
     <Compile Include="Assets\scripts\inventory\InventoryManager.cs" />
     <Compile Include="Assets\scripts\inventory\InventoryOpener.cs" />
     <Compile Include="Assets\scripts\inventory\Pickup.cs" />
+    <Compile Include="Assets\scripts\MoveWithMouse.cs" />
     <Compile Include="Assets\scripts\Nail.cs" />
     <Compile Include="Assets\scripts\Navigation.cs" />
     <Compile Include="Assets\scripts\Pills.cs" />

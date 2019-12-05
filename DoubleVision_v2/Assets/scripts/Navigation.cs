@@ -83,6 +83,8 @@ public class Navigation : MonoBehaviour
         if((portal != null) && (PlayerPrefs.GetInt("doorIsOpen") == 1))
         {
             portal.GetComponent<SpriteRenderer>().enabled = true;
+            portal.GetComponent<BoxCollider2D>().enabled = true;
+            portal.GetComponent<Button>().enabled = true;
         }
 
     }
@@ -104,6 +106,9 @@ public class Navigation : MonoBehaviour
 
     }
 
-
+    public void EndGame()
+    {
+        SceneManager.LoadScene("end");
+    }
 
 }

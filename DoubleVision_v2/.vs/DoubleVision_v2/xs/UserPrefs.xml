@@ -1,12 +1,11 @@
 ﻿<Properties StartupConfiguration="{FF814AAD-301A-D345-A2E7-A68B3016605F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/StateSwitch.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Navigation.cs">
     <Files>
-      <File FileName="Assets/scripts/inventory/Pickup.cs" Line="122" Column="36" />
-      <File FileName="Assets/scripts/inventory/InventoryManager.cs" Line="107" Column="32" />
+      <File FileName="Assets/scripts/inventory/Pickup.cs" Line="67" Column="43" />
+      <File FileName="Assets/scripts/inventory/InventoryManager.cs" Line="52" Column="30" />
+      <File FileName="Assets/scripts/inventory/InventoryItem.cs" Line="9" Column="27" />
       <File FileName="Assets/scripts/Doors.cs" Line="16" Column="27" />
-      <File FileName="Assets/scripts/BeginGame.cs" Line="35" Column="6" />
-      <File FileName="Assets/scripts/inventory/InventoryItem.cs" Line="18" Column="9" />
-      <File FileName="Assets/scripts/StateSwitch.cs" Line="168" Column="59" />
+      <File FileName="Assets/scripts/Navigation.cs" Line="86" Column="65" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

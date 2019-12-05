@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pickup : InventoryManager
+public class Pickup : MonoBehaviour
 {
     public AudioClip PickupSound;
     public AudioSource PickupSoundSource;
@@ -23,8 +23,6 @@ public class Pickup : InventoryManager
     public static int crowbarCollected = 0;
     public static int keyCollected = 0;
 
-    public GameObject crowbar;
-
 
     // Start is called before the first frame update
     void Start()
@@ -36,70 +34,67 @@ public class Pickup : InventoryManager
     // look through the array of inventory slots to check is each of themis full
     public void CollectItem()
     {
-        for (int i = 0; i < inventory.slots.Length; i++)
-      { 
-        // once we find the slot that is not full, we set it to full since we're adding a new item to it
-        if(inventory.isFull[i] == false)
-        {
-            // Item can be added
-            inventory.isFull[i] = true;
-            // make sure that the button spawns at the same position as the inventory slot
-            Instantiate(itemButton, inventory.slots[i].transform, false);
-            // Naming the object by its object name
-            nameOfObject = gameObject.name;
-            Debug.Log("You found " + nameOfObject);
-        
-            ShowPopup();
+            for (int i = 0; i < inventory.slots.Length; i++)
+          { 
+            // once we find the slot that is not full, we set it to full since we're adding a new item to it
+                if(inventory.isFull[i] == false)
+                {
+                    // Item can be added
+                    inventory.isFull[i] = true;
+                    // make sure that the button spawns at the same position as the inventory slot
+                    Instantiate(itemButton, inventory.slots[i].transform, false);
+                    // Naming the object by its object name
+                    nameOfObject = gameObject.name;        
+                    ShowPopup();
 
 
-            // Play sound when an object is being picked up
-            PickupSoundSource = GameObject.Find("PickupSound").GetComponent<AudioSource>();
-            PickupSoundSource.clip = PickupSound;
-            PickupSoundSource.Play();
+                    // Play sound when an object is being picked up
+                    PickupSoundSource = GameObject.Find("PickupSound").GetComponent<AudioSource>();
+                    PickupSoundSource.clip = PickupSound;
+                    PickupSoundSource.Play();
 
-            // Destroy the game object from the scene
-            Destroy(gameObject);
+                    // Destroy the game object from the scene
+                    Destroy(gameObject);
+
+                        // Set the state to "collected"
+                        if (nameOfObject == "knife")
+                    {
+                        knifeCollected = 1;
+                    }
+
+                    if (nameOfObject == "nail")
+                    {
+                        nailCollected = 1;
+                    }
+
+                        if (nameOfObject == "wallpaper")
+                    {
+                        wallpaperCollected = 1;
+                    }
+
+                    if (nameOfObject == "pills")
+                    {
+                        pillsCollected = 1;
+                    }
+
+                    if (nameOfObject == "crowbar")
+                    {
+                        crowbarCollected = 1;
+                    }
+
+                    if (nameOfObject == "key")
+                    {
+                        keyCollected = 1;
+                    }
 
 
-            // Set the state to "collected"
-            if (nameOfObject == "knife")
-            {
-                knifeCollected = 1;
-            }
+                    SaveVars();
 
-            if (nameOfObject == "nail")
-            {
-                nailCollected = 1;
-                crowbar = GameObject.Find("Crowbar");
-                Destroy(crowbar);
-            }
 
-            if (nameOfObject == "wallpaper")
-            {
-                wallpaperCollected = 1;
-            }
-
-            if (nameOfObject == "pills")
-            {
-                pillsCollected = 1;
-            }
-
-            if (nameOfObject == "crowbar")
-            {
-                crowbarCollected = 1;
-            }
-
-            if (nameOfObject == "key")
-            {
-                keyCollected = 1;
-            }
-
-                SaveVars();
-
-            // and the loop stops
-            break;
-        }
-      }
+                    // and the loop stops
+                    break;
+                }
+          }
 
     }
 

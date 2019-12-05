@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    public Transform KnifeItem; //you need one prefab like this for each tiem
-    public Transform PillsItem;
-    public Transform WallpaperItem;
-    public Transform NailItem;
-    public Transform CrowbarItem;
+    //public Transform KnifeItem; //you need one prefab like this for each tiem
+    //public Transform PillsItem;
+    //public Transform WallpaperItem;
+    //public Transform NailItem;
+    //public Transform CrowbarItem;
 
 
-    public Text ItemLabel; //this is only for debug, ideally you would have an image following the cursor
-   
+    //public Text ItemLabel; //this is only for debug, ideally you would have an image following the cursor
+    public Image ItemImage; 
 
 
     // Creating static vars to be accessed from across multiple scenes
@@ -24,7 +24,7 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
-        UpdateInventory(); //Display what we have right now.
+        //UpdateInventory(); //Display what we have right now.
     }
 
     // Update is called once per frame
@@ -43,9 +43,14 @@ public class InventoryManager : MonoBehaviour
     {
         //Register the name of selected object and updates the debug label.
         CurrentItem = ItemName;
-        ItemLabel.text = ItemName;
+        //ItemLabel.text = ItemName;
+        Debug.Log(ItemName);
     }
 
+    public void SelectItemImg(Image ItemIcon)
+    {
+        ItemImage = ItemIcon;
+    }
 
 
     public void RemoveItem(string ItemName)
@@ -55,7 +60,7 @@ public class InventoryManager : MonoBehaviour
         SelectItem("none");
 
         //Update the visual inventory
-        UpdateInventory();
+       // UpdateInventory();
     }
 
 
@@ -67,44 +72,46 @@ public class InventoryManager : MonoBehaviour
         SelectItem(ItemName);
 
         //Update the visual inventory
-        UpdateInventory();
+        //UpdateInventory();
     }
 
 
 
-    public void UpdateInventory()
-    {
-        //First we clear all the grandchildren of the inventory objects (the items)
-        foreach (Transform child in transform)
-        {
+    //public void UpdateInventory()
+    //{
 
-          foreach (Transform grandChild in child)
-            {
-                Destroy(grandChild.gameObject);
-            }
-            
-        }
+    //    Debug.Log("updated");
 
-        //Then we add all the items we have. You need of these for each of your item
-        //if (PlayerPrefs.GetInt("knife")==1)
-        //{
-        //    Instantiate(KnifeItem, this.transform);
-        //}
+    //    //First we clear all the grandchildren of the inventory objects (the items)
+    //    foreach (Transform child in transform)
+    //    {
 
-        //if (PlayerPrefs.GetInt("pills")==1)
-        //{
-        //    Instantiate(PillsItem, this.transform);
-        //}
+    //      foreach (Transform grandChild in child)
+    //        {
+    //            Destroy(grandChild.gameObject);
+    //        }
+    //    }
 
-        //if (PlayerPrefs.GetInt("wallpaper") == 1)
-        //{
-        //    Instantiate(WallpaperItem, this.transform);
-        //}
+    //    //Then we add all the items we have. You need of these for each of your item
+    //    if (PlayerPrefs.GetInt("knife")==1)
+    //    {
+    //        Instantiate(KnifeItem, this.transform);
+    //    }
 
-        //if (PlayerPrefs.GetInt("nail") == 1)
-        //{
-        //    Instantiate(NailItem, this.transform);
-        //}
-    }
+    //    if (PlayerPrefs.GetInt("pills")==1)
+    //    {
+    //        Instantiate(PillsItem, this.transform);
+    //    }
+
+    //    if (PlayerPrefs.GetInt("wallpaper") == 1)
+    //    {
+    //        Instantiate(WallpaperItem, this.transform);
+    //    }
+
+    //    if (PlayerPrefs.GetInt("nail") == 1)
+    //    {
+    //        Instantiate(NailItem, this.transform);
+    //    }
+    //}
 
 }

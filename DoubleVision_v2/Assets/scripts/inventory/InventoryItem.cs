@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class InventoryItem : MonoBehaviour
 {
     public string ItemName; //Type in the name of the item in the editor
+    public Image ItemIcon;
 
     private void Start()
     {

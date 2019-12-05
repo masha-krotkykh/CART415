@@ -314,18 +314,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a696337a3ed7649dab8e9a21d3c574a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnifeItem: {fileID: 0}
-  PillsItem: {fileID: 0}
-  WallpaperItem: {fileID: 0}
-  NailItem: {fileID: 0}
-  CrowbarItem: {fileID: 0}
-  ItemLabel: {fileID: 0}
   PickupSound: {fileID: 8300000, guid: 893438713fcae48f988da51a86c0c35c, type: 3}
   PickupSoundSource: {fileID: 0}
   popup: {fileID: 304772837}
   itemButton: {fileID: 6654290381182320035, guid: 7912d98304e3a474b8e272a48ac839cd,
     type: 3}
-  crowbar: {fileID: 0}
+  knifeButton: {fileID: 0}
+  nailButton: {fileID: 0}
+  wallpaperButton: {fileID: 0}
+  pillsButton: {fileID: 0}
+  crowbarButton: {fileID: 0}
+  keyButton: {fileID: 0}
 --- !u!114 &35920546 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1367413062914206403, guid: 4e3aa9e1d23704b22a67eb967dc9bd14,
@@ -535,18 +534,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e837ea2a1b6cb4524ac0190a2f03c5f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnifeItem: {fileID: 0}
-  PillsItem: {fileID: 0}
-  WallpaperItem: {fileID: 0}
-  NailItem: {fileID: 0}
-  CrowbarItem: {fileID: 0}
-  ItemLabel: {fileID: 0}
   PickupSound: {fileID: 8300000, guid: 893438713fcae48f988da51a86c0c35c, type: 3}
   PickupSoundSource: {fileID: 0}
   popup: {fileID: 304772837}
   itemButton: {fileID: 4338449720572041125, guid: 98fd3fc6664f1495abc93160a07282d7,
     type: 3}
-  crowbar: {fileID: 0}
+  knifeButton: {fileID: 0}
+  nailButton: {fileID: 0}
+  wallpaperButton: {fileID: 0}
+  pillsButton: {fileID: 0}
+  crowbarButton: {fileID: 4338449720572041125, guid: 98fd3fc6664f1495abc93160a07282d7,
+    type: 3}
+  keyButton: {fileID: 0}
 --- !u!61 &48459065
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -768,17 +767,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e837ea2a1b6cb4524ac0190a2f03c5f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnifeItem: {fileID: 0}
-  PillsItem: {fileID: 0}
-  WallpaperItem: {fileID: 0}
-  NailItem: {fileID: 0}
-  CrowbarItem: {fileID: 0}
-  ItemLabel: {fileID: 0}
   PickupSound: {fileID: 0}
   PickupSoundSource: {fileID: 0}
   popup: {fileID: 304772837}
   itemButton: {fileID: 0}
-  crowbar: {fileID: 0}
+  knifeButton: {fileID: 0}
+  nailButton: {fileID: 0}
+  wallpaperButton: {fileID: 0}
+  pillsButton: {fileID: 0}
+  crowbarButton: {fileID: 0}
+  keyButton: {fileID: 0}
 --- !u!114 &219376457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1655,17 +1653,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e837ea2a1b6cb4524ac0190a2f03c5f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnifeItem: {fileID: 0}
-  PillsItem: {fileID: 0}
-  WallpaperItem: {fileID: 0}
-  NailItem: {fileID: 0}
-  CrowbarItem: {fileID: 0}
-  ItemLabel: {fileID: 0}
   PickupSound: {fileID: 0}
   PickupSoundSource: {fileID: 0}
   popup: {fileID: 304772837}
   itemButton: {fileID: 0}
-  crowbar: {fileID: 0}
+  knifeButton: {fileID: 0}
+  nailButton: {fileID: 0}
+  wallpaperButton: {fileID: 0}
+  pillsButton: {fileID: 0}
+  crowbarButton: {fileID: 0}
+  keyButton: {fileID: 0}
 --- !u!114 &1829678342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2190,18 +2187,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f11b9f583cb84ceeb17d7b5e3e45183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnifeItem: {fileID: 0}
-  PillsItem: {fileID: 0}
-  WallpaperItem: {fileID: 0}
-  NailItem: {fileID: 0}
-  CrowbarItem: {fileID: 0}
-  ItemLabel: {fileID: 0}
   PickupSound: {fileID: 8300000, guid: 893438713fcae48f988da51a86c0c35c, type: 3}
   PickupSoundSource: {fileID: 0}
   popup: {fileID: 304772837}
   itemButton: {fileID: 3571707916744046576, guid: caa614d3b433a4d2084d9718859a4be8,
     type: 3}
-  crowbar: {fileID: 0}
+  knifeButton: {fileID: 0}
+  nailButton: {fileID: 0}
+  wallpaperButton: {fileID: 0}
+  pillsButton: {fileID: 0}
+  crowbarButton: {fileID: 0}
+  keyButton: {fileID: 0}
 --- !u!114 &7702986823707035989
 MonoBehaviour:
   m_ObjectHideFlags: 0
